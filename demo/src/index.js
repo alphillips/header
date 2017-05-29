@@ -6,7 +6,6 @@ import Component from '../../src'
 let Demo = React.createClass({
   render() {
     return <div>
-      <h1>header Demo</h1>
       <Component/>
     </div>
   }

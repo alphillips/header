@@ -1,0 +1,22 @@
+.header {
+  background-color: #857d6f;
+}
+  .header .header-block {
+    padding: 0 2em; }
+    @media screen and (min-width: 992px) {
+      .header .header-block {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto; } }
+  .header .header-logo {
+    margin-left: 4em;
+    padding-top: 0.5em; }
+    @media screen and (min-width: 992px) {
+      .header .header-logo {
+        margin-left: 0; } }
+    .header .header-logo a {
+      border-bottom: 0; }
+      .header .header-logo a:hover, .header .header-logo a:focus {
+        background-color: inherit; }
+    .header .header-logo img {
+      width: 250px; }
