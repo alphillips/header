@@ -2,6 +2,9 @@
 
 React header component for external web apps
 
+> Note: This header doesn't not yet include the menu or logged in user.
+But it will soon :v:
+
 ## Usage
 
 ### Install
@@ -10,11 +13,11 @@ npm i @react-ag-components/header --save
 ```
 ### Use in your project
 ```
-import Input from '@react-ag-components/header'
+import Header from '@react-ag-components/header'
 ```
 
 ```
-<header />
+<Header />
 ```
 
 ### Properties
