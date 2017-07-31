@@ -6,7 +6,8 @@
 
 .uikit-body .header .header-block ul {
   margin-bottom: 0;
-  padding-left: 0; }
+  padding-left: 0;
+}
 
 @media screen and (min-width: 992px) {
   .header .header-block {
@@ -40,7 +41,9 @@ nav.global-menu {
   margin-top: 2px;
   margin-bottom: -16px;
   position: relative;
-  padding: 10px; }
+  // padding-left: 40px;
+  padding: 10px;
+}
 
 .global-menu ul {
   /*margin-left: 40px;*/
@@ -50,7 +53,10 @@ nav.global-menu {
   list-style-type: none;
   padding: 0;
   margin-bottom: 0;
-  /*margin-bottom: 16px;*/ }
+  // padding-top: 55px;
+  /*margin-bottom: 16px;*/
+
+}
 
 .global-menu ul li {
   border: 0;
@@ -58,7 +64,9 @@ nav.global-menu {
   background-color: #343434;
   border: 1px solid #797979;
   border-bottom: 5px solid #823c47;
-  /*margin-right: 24px;*/ }
+  // padding: 10px 10px;
+  /*margin-right: 24px;*/
+}
 
 nav.global-menu a {
   color: #fff;
@@ -67,10 +75,13 @@ nav.global-menu a {
   display: inline-block;
   min-width: 85px;
   max-width: 85px;
-  text-align: center; }
+  text-align: center;
 
-nav.global-menu a.current {
-  background-color: #823c47; }
+  &.current {
+    background-color: #823c47;
+  }
+
+}
 
 @media screen and (max-width: 992px) {
   nav.global-menu {
@@ -84,22 +95,30 @@ nav.global-menu a.current {
 
 nav.global-menu a:focus {
   background-color: inherit;
+  // border-color: transparent;
   outline: none;
+  // background-color: #823c47;
   text-decoration: underline;
-  /*border-color: transparent;*/ }
+  /*border-color: transparent;*/
+  // border-bottom: 4px solid #fff;
+  &.current {
+    background-color: #823c47;
+  }
 
-nav.global-menu a:focus.current {
-  background-color: #823c47; }
+}
 
 nav.global-menu a:hover {
-  background-color: #823c47; }
+  background-color: #823c47;
+}
+  /*border-color: transparent;*/
+  // border-bottom: 4px solid #fff; }
 
-/*border-color: transparent;*/
 @media screen and (min-width: 1200px) {
   .header .header-block .container {
     width: 900px;
     padding-left: 0;
     padding-right: 0; } }
+
 
 nav.bm-item-list {
   padding: 0; }
@@ -117,21 +136,30 @@ nav.bm-item-list {
 .side-menu ul a:focus {
   background-color: transparent;
   border-color: transparent;
-  outline: 1px solid #fff; }
+  outline: 1px solid #fff;
+}
 
 .side-menu ul a:hover {
+  // background-color: #823c47;
   /*border-color: transparent;*/
-  border-bottom: 4px solid #fff; }
+  border-bottom: 4px solid #fff;
+}
 
-.uikit-body a.return-to-link {
-  color: #fff;
-  font-size: 0.8em; }
+.uikit-body a.return-to-link{
+  color:#fff;
+  font-size: 0.8em;
+}
 
 .nexdoc-header-name {
+
   font-size: 2em;
+  // border: 2px solid #00759A;
+  // margin-top: 30px;
   margin-top: 10px;
   border-radius: 3px;
   padding: 1px 4px;
   max-width: 150px;
+  // background-color: #4299B4;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+}

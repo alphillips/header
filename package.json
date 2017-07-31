@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/header",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "header React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -18,11 +18,15 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-burger-menu": "^2.1.4"
+  },
   "peerDependencies": {
     "react": "15.x"
   },
   "devDependencies": {
+    "@gov.au/grid-12": "^0.1.0",
+    "@gov.au/pancake-sass": "^1.1.1",
     "nwb": "0.15.x",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
@@ -31,10 +35,32 @@
   "homepage": "",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/alphillips/header.git"
+    "type": "git",
+    "url": "https://github.com/alphillips/header.git"
   },
   "keywords": [
     "react-component"
-  ]
+  ],
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "css": {
+      "minified": true,
+      "modules": false,
+      "browsers": [
+        "last 2 versions",
+        "ie 8",
+        "ie 9",
+        "ie 10"
+      ],
+      "location": "pancake/css/",
+      "name": "pancake.min.css"
+    },
+    "sass": {
+      "modules": false,
+      "location": "pancake/sass/",
+      "name": "pancake.scss"
+    }
+  }
 }
