@@ -1,11 +1,14 @@
 import React from 'react'
 import Menu from 'react-burger-menu/lib/menus/slide'
+import SearchBar from './SearchBar'
 import { Link, hashHistory } from 'react-router'
 
 import logo from './da-logo.svg'
 import './header.css'
+import './SearchBar/searchbar.css'
 import './uikit.css'
 import './application-side-menu.css'
+
 class Header extends React.Component {
 
     constructor(props) {
@@ -64,6 +67,7 @@ class Header extends React.Component {
                 <li><Link to="/" className="staff-home-link">Home</Link></li>
                 <li><Link to="/">{this.props.userName}</Link></li>
                 <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                <li className="autocomplete-li-link-search"><SearchBar /></li>
               </ul>
             </div>
             </div>
@@ -93,8 +97,10 @@ class Header extends React.Component {
                 <ul>
                   <li><Link to="/OSS/faces/homePage" className="staff-home-link">Client portal</Link></li>
                   <li><Link to="/">{this.props.userName}</Link></li>
-                  <li className="header-app-name">{this.props.name}</li>
                   <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                  <li className="header-app-name">{this.props.name}</li>
+                  <li className="autocomplete-li-link-search"><SearchBar /></li>
+
                 </ul>
               </div>
             </div>
