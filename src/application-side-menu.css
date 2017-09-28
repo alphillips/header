@@ -10,29 +10,25 @@
   left: 15px;
   top: 30px;
   display: block; }
-  @media screen and (min-width: 992px) {
-    .bm-burger-button {
-      display: none;
-      }
-    }
+
+@media screen and (min-width: 992px) {
+  .bm-burger-button {
+    display: none; } }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #fff;
-}
+  background: #fff; }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
   width: 24px;
-  /*top:45px;*/
-}
+  /*top:45px;*/ }
 
 /* Color/shape of close button cross */
 .bm-cross {
   background: #fff;
-  /*top:45px;*/
-}
+  /*top:45px;*/ }
 
 /* General sidebar styles */
 .bm-menu {
