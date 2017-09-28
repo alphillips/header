@@ -165,7 +165,13 @@ nav.bm-item-list {
 
 .top-menu-header .top-links-wrapper {
   background: #343434;
-  color: #ffffff; }
+  color: #ffffff;
+  height: 70px;
+
+  @media screen and (min-width: 992px) {
+    height: 30px;
+  }
+}
 
 .top-menu-header .top-links {
   display: block; }
@@ -326,11 +332,9 @@ a.staff-home-link:before {
 
 .top-links {
   ul {
-    overflow: auto;
     height: 30px;
   }
   li {
-    float: right;
     margin-top: 3px;
     margin-bottom: 0;
     margin-left: 0;
@@ -338,11 +342,30 @@ a.staff-home-link:before {
       float: left;
     }
     &.header-app-name {
-      margin-left: 20%;
+      margin-left: 5%;
+      @media (min-width: 768px) {
+        margin-left: 20%;
+      }
     }
     &.autocomplete-li-link-search{
-      margin-left: 10px;
+      margin-left: 15%;
       margin-top: 1px;
+      @media screen and (min-width: 992px) {
+        margin-left: 25%;
+      }
+    }
+    &.header-app-username {
+      margin-left: 10px;
+    }
+    &.logout-li-link-staff {
+      position: absolute;
+      right: 20px;
+      top: 42px;
+    @media screen and (min-width: 992px) {
+        position: relative;
+        top: auto;
+        right: auto;
+      }
     }
   }
 }
