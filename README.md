@@ -42,7 +42,7 @@ npm start
 
 ### Deploy to npm
 #### Build
-`npm run build -- --copy-files`
+`npm run build --copy-files`
 
 #### Publish
 `npm publish --access public`
