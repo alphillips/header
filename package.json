@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/header",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "header React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -19,7 +19,8 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react-burger-menu": "^2.1.4"
+    "react-burger-menu": "^2.1.4",
+    "react-autosuggest": "^9.3.2",
   },
   "peerDependencies": {
     "react": "15.x"
@@ -27,7 +28,6 @@
   "devDependencies": {
     "nwb": "0.15.x",
     "react": "^15.5.4",
-    "react-autosuggest": "^9.3.2",
     "react-dom": "^15.5.4",
     "react-router": "^3.0.0"
   },
