@@ -1,5 +1,5 @@
 .header {
-  background-color: #857d6f; }
+  background-color: whitesmoke; }
 
 .header .header-block {
   padding: 0 2em; }
@@ -17,7 +17,7 @@
 
 @media screen and (min-width: 992px) {
   .staff-header .top-links, .staff-header .logo, .top-links {
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto; } }
 
@@ -169,7 +169,7 @@ nav.bm-item-list {
   height: 70px;
 
   @media screen and (min-width: 992px) {
-    height: 30px;
+    height: 34px;
   }
 }
 
@@ -183,10 +183,12 @@ nav.bm-item-list {
   padding: 9px 12px; }
 
 .top-menu-header .top-links a:focus {
-  background: #823c47; }
+  background: #823c47;
+  border-bottom: 1px solid #823c47; }
 
 .top-menu-header .top-links a:hover {
-  background: #823c47; }
+  background: #823c47;
+  border-bottom: 1px solid #823c47;}
 
 .top-menu-header .top-links ul {
   padding: 0;
@@ -338,9 +340,6 @@ a.staff-home-link:before {
     margin-top: 3px;
     margin-bottom: 0;
     margin-left: 0;
-    &:nth-child(1), &.header-app-name {
-      float: left;
-    }
     &.header-app-name {
       margin-left: 5%;
       @media (min-width: 768px) {

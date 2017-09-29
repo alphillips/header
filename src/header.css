@@ -1,5 +1,5 @@
 .header {
-  background-color: #857d6f;
+  background-color: whitesmoke;
 }
 
 .header .header-block {
@@ -20,7 +20,7 @@
 }
 @media screen and (min-width: 992px) {
   .staff-header .top-links, .staff-header .logo, .top-links {
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -177,7 +177,7 @@ nav.bm-item-list {
 }
 @media screen and (min-width: 992px) {
   .top-menu-header .top-links-wrapper {
-    height: 30px;
+    height: 34px;
   }
 }
 
@@ -194,10 +194,12 @@ nav.bm-item-list {
 
 .top-menu-header .top-links a:focus {
   background: #823c47;
+  border-bottom: 1px solid #823c47;
 }
 
 .top-menu-header .top-links a:hover {
   background: #823c47;
+  border-bottom: 1px solid #823c47;
 }
 
 .top-menu-header .top-links ul {
@@ -399,9 +401,6 @@ a.staff-home-link:before {
   margin-top: 3px;
   margin-bottom: 0;
   margin-left: 0;
-}
-.top-links li:nth-child(1), .top-links li.header-app-name {
-  float: left;
 }
 .top-links li.header-app-name {
   margin-left: 5%;
