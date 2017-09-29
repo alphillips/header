@@ -1,5 +1,5 @@
 .header {
-  background-color: #857d6f;
+  background-color: whitesmoke;
 }
 
 .header .header-block {
@@ -20,7 +20,7 @@
 }
 @media screen and (min-width: 992px) {
   .staff-header .top-links, .staff-header .logo, .top-links {
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -177,7 +177,7 @@ nav.bm-item-list {
 }
 @media screen and (min-width: 992px) {
   .top-menu-header .top-links-wrapper {
-    height: 30px;
+    height: 34px;
   }
 }
 
@@ -194,10 +194,12 @@ nav.bm-item-list {
 
 .top-menu-header .top-links a:focus {
   background: #823c47;
+  border-bottom: 1px solid #823c47;
 }
 
 .top-menu-header .top-links a:hover {
   background: #823c47;
+  border-bottom: 1px solid #823c47;
 }
 
 .top-menu-header .top-links ul {
@@ -393,15 +395,12 @@ a.staff-home-link:before {
 }
 
 .top-links ul {
-  height: 30px;
+  height: 100%;
 }
 .top-links li {
   margin-top: 3px;
   margin-bottom: 0;
   margin-left: 0;
-}
-.top-links li:nth-child(1), .top-links li.header-app-name {
-  float: left;
 }
 .top-links li.header-app-name {
   margin-left: 5%;
@@ -412,26 +411,28 @@ a.staff-home-link:before {
   }
 }
 .top-links li.autocomplete-li-link-search {
-  margin-left: 15%;
-  margin-top: 1px;
-}
-@media screen and (min-width: 992px) {
-  .top-links li.autocomplete-li-link-search {
-    margin-left: 25%;
-  }
+  margin-top: 3px;
+  float: right;
 }
 .top-links li.header-app-username {
   margin-left: 10px;
+  float: right;
+  max-width: 500px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  margin: 7px 5px 0 15px;
 }
 .top-links li.logout-li-link-staff {
   position: absolute;
   right: 20px;
   top: 42px;
+  float: none;
 }
 @media screen and (min-width: 992px) {
   .top-links li.logout-li-link-staff {
     position: relative;
     top: auto;
     right: auto;
+    float: right;
   }
 }

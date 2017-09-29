@@ -22,6 +22,7 @@ let Demo = React.createClass({
           </ul>
         }
         name="Heading"
+        userName="Demo User"
       />
     </div>
   }
