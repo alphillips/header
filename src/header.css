@@ -404,10 +404,11 @@ a.staff-home-link:before {
 }
 .top-links li.header-app-name {
   margin-left: 5%;
+  margin-top: 4px;
 }
 @media (min-width: 768px) {
   .top-links li.header-app-name {
-    margin-left: 20%;
+    margin-left: 25%;
   }
 }
 .top-links li.autocomplete-li-link-search {
