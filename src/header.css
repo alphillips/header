@@ -395,7 +395,7 @@ a.staff-home-link:before {
 }
 
 .top-links ul {
-  height: 30px;
+  height: 100%;
 }
 .top-links li {
   margin-top: 3px;
@@ -411,26 +411,28 @@ a.staff-home-link:before {
   }
 }
 .top-links li.autocomplete-li-link-search {
-  margin-left: 15%;
-  margin-top: 1px;
-}
-@media screen and (min-width: 992px) {
-  .top-links li.autocomplete-li-link-search {
-    margin-left: 25%;
-  }
+  margin-top: 3px;
+  float: right;
 }
 .top-links li.header-app-username {
   margin-left: 10px;
+  float: right;
+  max-width: 500px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  margin: 7px 5px 0 15px;
 }
 .top-links li.logout-li-link-staff {
   position: absolute;
   right: 20px;
   top: 42px;
+  float: none;
 }
 @media screen and (min-width: 992px) {
   .top-links li.logout-li-link-staff {
     position: relative;
     top: auto;
     right: auto;
+    float: right;
   }
 }

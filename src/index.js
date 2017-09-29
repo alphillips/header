@@ -65,9 +65,9 @@ class Header extends React.Component {
             <div className="top-links">
               <ul>
                 <li><Link to="/" className="staff-home-link">Home</Link></li>
-                <li className="autocomplete-li-link-search"><SearchBar /></li>
-                <li className="header-app-username"><Link to="/">{this.props.userName}</Link></li>
                 <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                <li className="header-app-username">{this.props.userName}</li>
+                <li className="autocomplete-li-link-search"><SearchBar /></li>
               </ul>
             </div>
             </div>
@@ -97,9 +97,9 @@ class Header extends React.Component {
                 <ul>
                   <li><a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a></li>
                   <li className="header-app-name">{this.props.name}</li>
-                  <li className="autocomplete-li-link-search"><SearchBar /></li>
-                  <li className="header-app-username"><Link to="/">{this.props.userName}</Link></li>
                   <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                  <li className="header-app-username">{this.props.userName}</li>
+                  <li className="autocomplete-li-link-search"><SearchBar /></li>
                 </ul>
               </div>
             </div>

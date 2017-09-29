@@ -334,7 +334,7 @@ a.staff-home-link:before {
 
 .top-links {
   ul {
-    height: 30px;
+    height: 100%;
   }
   li {
     margin-top: 3px;
@@ -342,28 +342,33 @@ a.staff-home-link:before {
     margin-left: 0;
     &.header-app-name {
       margin-left: 5%;
+      margin-top: 4px;
       @media (min-width: 768px) {
         margin-left: 20%;
       }
     }
     &.autocomplete-li-link-search{
-      margin-left: 15%;
-      margin-top: 1px;
-      @media screen and (min-width: 992px) {
-        margin-left: 25%;
-      }
+      margin-top: 3px;
+      float: right;
     }
     &.header-app-username {
       margin-left: 10px;
+      float:right;
+      max-width: 500px;
+      overflow: hidden;
+      font-size: 0.8rem;
+      margin: 7px 5px 0 15px;
     }
     &.logout-li-link-staff {
       position: absolute;
       right: 20px;
       top: 42px;
+      float: none;
     @media screen and (min-width: 992px) {
         position: relative;
         top: auto;
         right: auto;
+        float: right;
       }
     }
   }
