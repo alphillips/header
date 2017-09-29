@@ -169,7 +169,7 @@ nav.bm-item-list {
   height: 70px;
 
   @media screen and (min-width: 992px) {
-    height: 34px;
+    height: auto;
   }
 }
 
@@ -180,7 +180,7 @@ nav.bm-item-list {
   color: #ffffff;
   border-bottom: none;
   font-size: .8rem;
-  padding: 9px 12px; }
+  padding: 0.5rem 12px; }
 
 .top-menu-header .top-links a:focus {
   background: #823c47;

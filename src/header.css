@@ -177,7 +177,7 @@ nav.bm-item-list {
 }
 @media screen and (min-width: 992px) {
   .top-menu-header .top-links-wrapper {
-    height: 34px;
+    height: auto;
   }
 }
 
@@ -189,7 +189,7 @@ nav.bm-item-list {
   color: #ffffff;
   border-bottom: none;
   font-size: .8rem;
-  padding: 9px 12px;
+  padding: 0.5rem 12px;
 }
 
 .top-menu-header .top-links a:focus {
