@@ -17,7 +17,7 @@
 
 @media screen and (min-width: 992px) {
   .staff-header .top-links, .staff-header .logo, .top-links {
-    max-width: 1200px;
+    // max-width: 1700px;
     margin-left: auto;
     margin-right: auto; } }
 
@@ -41,9 +41,6 @@
 
 .header .header-logo img {
   width: 250px; }
-
-.header-app-name {
-  margin-left: 200px; }
 
 nav.global-menu {
   display: inline-block;
@@ -104,7 +101,6 @@ nav.global-menu a:focus {
   &.current {
     background-color: #823c47;
   }
-
 }
 
 nav.global-menu a:hover {
@@ -333,6 +329,9 @@ a.staff-home-link:before {
   background-repeat: no-repeat; }
 
 .top-links {
+  &.main-block {
+    background-color: transparent;
+  }
   ul {
     height: 100%;
   }
@@ -343,16 +342,16 @@ a.staff-home-link:before {
     &.header-app-name {
       margin-left: 5%;
       @media (min-width: 768px) {
-        margin-left: 25%;
+        width: 43%;
+        text-align: center;
       }
     }
     &.autocomplete-li-link-search{
       margin-top: 3px;
-      float: right;
+      width: 20%;
     }
     &.header-app-username {
       margin-left: 10px;
-      float:right;
       max-width: 500px;
       overflow: hidden;
       font-size: 0.8rem;
@@ -367,7 +366,6 @@ a.staff-home-link:before {
         position: relative;
         top: auto;
         right: auto;
-        float: right;
       }
     }
   }
