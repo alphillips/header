@@ -1,3 +1,5 @@
+$serchhover:              darken(whitesmoke, 10%);
+
 .header {
   background-color: whitesmoke; }
 
@@ -372,6 +374,15 @@ a.staff-home-link:before {
         top: auto;
         right: auto;
       }
+    }
+  }
+}
+
+
+.uikit-body{
+  a{
+    &:hover, &:focus {
+      background-color: $serchhover;
     }
   }
 }

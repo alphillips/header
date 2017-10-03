@@ -438,3 +438,7 @@ a.staff-home-link:before {
     right: auto;
   }
 }
+
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: gainsboro;
+}
