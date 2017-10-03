@@ -14,7 +14,7 @@ $serchhover:              darken(whitesmoke, 10%);
     font-size: 0.8rem;
     border: 1px solid $border-grey;
     padding-left: 22px;
-    // width: 240px;
+    width: 100%;
     border-radius: 12px;
 
     &::-webkit-search-cancel-button,
@@ -57,14 +57,13 @@ $serchhover:              darken(whitesmoke, 10%);
     display: block;
     position: absolute;
     top: 30px;
-    width: 310px;
+    width: 350px;
     border: 1px solid $border-grey;
     background-color: #fff;
     font-weight: 300;
     font-size: 16px;
     z-index: 2;
     color: black;
-    // padding: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 
     .react-autosuggest__suggestions-list {

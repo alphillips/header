@@ -342,7 +342,7 @@ a.staff-home-link:before {
     &.header-app-name {
       margin-left: 5%;
       @media (min-width: 768px) {
-        width: 43%;
+        width: 35%;
         text-align: center;
       }
     }
@@ -352,10 +352,15 @@ a.staff-home-link:before {
     }
     &.header-app-username {
       margin-left: 10px;
-      max-width: 500px;
-      overflow: hidden;
       font-size: 0.8rem;
-      margin: 7px 5px 0 15px;
+      margin: 0 5px 0 15px;
+      white-space: nowrap;
+      text-align: right;
+      width: 16%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
     }
     &.logout-li-link-staff {
       position: absolute;
