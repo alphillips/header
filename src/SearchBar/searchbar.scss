@@ -89,6 +89,8 @@ $serchhover:              darken(whitesmoke, 10%);
         cursor: pointer;
         padding: 0 10px;
         font-size: 0.7rem;
+        text-decoration: none;
+        border-bottom: none;
 
         &:hover {
           background-color: transparent;
