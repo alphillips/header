@@ -419,7 +419,8 @@ a.staff-home-link:before {
   margin: 0 5px 0 15px;
   white-space: nowrap;
   text-align: right;
-  width: 16%;
+  width: auto;
+  max-with: 16%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
