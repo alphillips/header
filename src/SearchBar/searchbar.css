@@ -40,8 +40,8 @@
 .top-menu-header .top-links .react-autosuggest__suggestions-container--open {
   display: block;
   position: absolute;
-  top: 30px;
-  width: 350px;
+  top: 70px;
+  width: 80%;
   border: 1px solid #E0E0E0;
   background-color: #fff;
   font-weight: 300;
@@ -49,6 +49,109 @@
   z-index: 2;
   color: black;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 992px) {
+  .top-menu-header .top-links .react-autosuggest__suggestions-container--open {
+    top: 30px;
+    width: 350px;
+  }
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestions-list {
+  height: auto;
+  max-height: 155px;
+  overflow-y: scroll;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestions-list li {
+  display: block;
+  width: 100%;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestion {
+  margin: 0;
+  padding: 0;
+  margin: 2px 0;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestion:hover {
+  background-color: gainsboro;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestion a {
+  color: black;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  border-bottom: none;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestion a:hover {
+  background-color: transparent;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestion a span {
+  margin-left: 5px;
+  font-style: italic;
+  font-size: 0.6rem;
+}
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestion a span:first-of-type {
+  font-size: 0.7rem;
+  margin-left: 0;
+  font-style: normal;
+}
+
+.autosuggestContainer {
+  position: relative;
+}
+.autosuggestContainer .react-autosuggest__input {
+  height: 20px;
+  border-style: none;
+  font-size: 0.8rem;
+  border: 1px solid #E0E0E0;
+  padding-left: 22px;
+  width: 100%;
+  border-radius: 12px;
+}
+.autosuggestContainer .react-autosuggest__input::-webkit-search-cancel-button, .autosuggestContainer .react-autosuggest__input::-webkit-search-results-button, .autosuggestContainer .react-autosuggest__input::-webkit-search-results-decoration {
+  display: none;
+}
+.autosuggestContainer .react-autosuggest__input::placeholder {
+  color: #999999;
+}
+.autosuggestContainer .react-autosuggest__input--focused {
+  outline: none;
+}
+.autosuggestContainer .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.autosuggestContainer i {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 20px;
+  height: 100%;
+  background-image: url("search.svg");
+  background-repeat: no-repeat;
+  background-position: left 50%;
+  background-size: 15px auto;
+  color: #ffffff;
+}
+
+.top-menu-header .top-links .react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 70px;
+  width: 80%;
+  border: 1px solid #E0E0E0;
+  background-color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+  z-index: 2;
+  color: black;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 992px) {
+  .top-menu-header .top-links .react-autosuggest__suggestions-container--open {
+    top: 30px;
+    width: 350px;
+  }
 }
 .top-menu-header .top-links .react-autosuggest__suggestions-container--open .react-autosuggest__suggestions-list {
   height: auto;
