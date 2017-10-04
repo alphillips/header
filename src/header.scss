@@ -164,6 +164,7 @@ nav.bm-item-list {
 .top-menu-header .top-links-wrapper {
   background: #343434;
   color: #ffffff;
+  // height: 70px;
   height: 70px;
 
   @media screen and (min-width: 992px) {
@@ -172,7 +173,13 @@ nav.bm-item-list {
 }
 
 .top-menu-header .top-links {
-  display: block; }
+  display: block;
+  margin-left: 40px;
+
+  @media screen and (min-width: 992px) {
+    margin-left: auto;
+  }
+}
 
 .top-menu-header .top-links a {
   color: #ffffff;
@@ -349,8 +356,11 @@ a.staff-home-link:before {
       }
     }
     &.autocomplete-li-link-search{
-      margin-top: 3px;
-      width: 20%;
+      margin-left: 20px;
+      @media screen and (min-width: 992px) {
+        margin-top: 3px;
+        width: auto;
+      }
     }
     &.header-app-username {
       margin-left: 10px;
@@ -359,7 +369,7 @@ a.staff-home-link:before {
       white-space: nowrap;
       text-align: right;
       width: auto;
-      max-with: 16%;
+      max-width: 23%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -367,8 +377,8 @@ a.staff-home-link:before {
     }
     &.logout-li-link-staff {
       position: absolute;
-      right: 20px;
-      top: 42px;
+      right: 5px;
+      top: auto;
       float: none;
     @media screen and (min-width: 992px) {
         position: relative;

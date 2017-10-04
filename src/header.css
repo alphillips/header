@@ -178,6 +178,12 @@ nav.bm-item-list {
 
 .top-menu-header .top-links {
   display: block;
+  margin-left: 40px;
+}
+@media screen and (min-width: 992px) {
+  .top-menu-header .top-links {
+    margin-left: auto;
+  }
 }
 
 .top-menu-header .top-links a {
@@ -410,8 +416,13 @@ a.staff-home-link:before {
   }
 }
 .top-links li.autocomplete-li-link-search {
-  margin-top: 3px;
-  width: 20%;
+  margin-left: 20px;
+}
+@media screen and (min-width: 992px) {
+  .top-links li.autocomplete-li-link-search {
+    margin-top: 3px;
+    width: auto;
+  }
 }
 .top-links li.header-app-username {
   margin-left: 10px;
@@ -420,7 +431,7 @@ a.staff-home-link:before {
   white-space: nowrap;
   text-align: right;
   width: auto;
-  max-with: 16%;
+  max-width: 23%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -428,8 +439,8 @@ a.staff-home-link:before {
 }
 .top-links li.logout-li-link-staff {
   position: absolute;
-  right: 20px;
-  top: 42px;
+  right: 5px;
+  top: auto;
   float: none;
 }
 @media screen and (min-width: 992px) {
@@ -441,5 +452,5 @@ a.staff-home-link:before {
 }
 
 .uikit-body a:hover, .uikit-body a:focus {
-  background-color: gainsboro;
+  background-color: gainsboro !important;
 }
