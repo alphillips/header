@@ -1,3 +1,5 @@
+$serchhover:              darken(whitesmoke, 10%);
+
 .header {
   background-color: whitesmoke; }
 
@@ -17,7 +19,7 @@
 
 @media screen and (min-width: 992px) {
   .staff-header .top-links, .staff-header .logo, .top-links {
-    max-width: 1200px;
+    // max-width: 1700px;
     margin-left: auto;
     margin-right: auto; } }
 
@@ -41,9 +43,6 @@
 
 .header .header-logo img {
   width: 250px; }
-
-.header-app-name {
-  margin-left: 200px; }
 
 nav.global-menu {
   display: inline-block;
@@ -104,7 +103,6 @@ nav.global-menu a:focus {
   &.current {
     background-color: #823c47;
   }
-
 }
 
 nav.global-menu a:hover {
@@ -166,6 +164,7 @@ nav.bm-item-list {
 .top-menu-header .top-links-wrapper {
   background: #343434;
   color: #ffffff;
+  // height: 70px;
   height: 70px;
 
   @media screen and (min-width: 992px) {
@@ -174,7 +173,13 @@ nav.bm-item-list {
 }
 
 .top-menu-header .top-links {
-  display: block; }
+  display: block;
+  margin-left: 40px;
+
+  @media screen and (min-width: 992px) {
+    margin-left: auto;
+  }
+}
 
 .top-menu-header .top-links a {
   color: #ffffff;
@@ -333,6 +338,9 @@ a.staff-home-link:before {
   background-repeat: no-repeat; }
 
 .top-links {
+  &.main-block {
+    background-color: transparent;
+  }
   ul {
     height: 100%;
   }
@@ -343,31 +351,39 @@ a.staff-home-link:before {
     &.header-app-name {
       margin-left: 5%;
       @media (min-width: 768px) {
-        margin-left: 25%;
+        width: 35%;
+        text-align: center;
       }
     }
     &.autocomplete-li-link-search{
-      margin-top: 3px;
-      float: right;
+      margin-left: 20px;
+      @media screen and (min-width: 992px) {
+        margin-top: 3px;
+        width: auto;
+      }
     }
     &.header-app-username {
       margin-left: 10px;
-      float:right;
-      max-width: 500px;
-      overflow: hidden;
       font-size: 0.8rem;
-      margin: 7px 5px 0 15px;
+      margin: 0 5px 0 15px;
+      white-space: nowrap;
+      text-align: right;
+      width: auto;
+      max-width: 23%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
     }
     &.logout-li-link-staff {
       position: absolute;
-      right: 20px;
-      top: 42px;
+      right: 5px;
+      top: auto;
       float: none;
     @media screen and (min-width: 992px) {
         position: relative;
         top: auto;
         right: auto;
-        float: right;
       }
     }
   }

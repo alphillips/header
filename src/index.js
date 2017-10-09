@@ -62,12 +62,12 @@ class Header extends React.Component {
 
 
           <div className="top-links-wrapper">
-            <div className="top-links">
+            <div className="top-links main-block">
               <ul>
                 <li><Link to="/" className="staff-home-link">Home</Link></li>
-                <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                <li className="autocomplete-li-link-search"><SearchBar searchArray={this.props.searchArray} searchKey={this.props.searchKey} /></li>
                 <li className="header-app-username">{this.props.userName}</li>
-                <li className="autocomplete-li-link-search"><SearchBar /></li>
+                <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
               </ul>
             </div>
             </div>
@@ -93,13 +93,13 @@ class Header extends React.Component {
           </div>
           <div className="top-menu-header">
             <div className="top-links-wrapper">
-              <div className="top-links">
+              <div className="top-links main-block">
                 <ul>
                   <li><a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a></li>
                   <li className="header-app-name">{this.props.name}</li>
-                  <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                  <li className="autocomplete-li-link-search"><SearchBar searchArray={this.props.searchArray} searchKey={this.props.searchKey} /></li>
                   <li className="header-app-username">{this.props.userName}</li>
-                  <li className="autocomplete-li-link-search"><SearchBar /></li>
+                  <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
                 </ul>
               </div>
             </div>

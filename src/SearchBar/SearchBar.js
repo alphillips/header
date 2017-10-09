@@ -1,43 +1,9 @@
-import Autosuggest from 'react-autosuggest';
 import React from 'react';
-
-// Imagine you have a list of languages that you'd like to autosuggest.
-const languages = [
-  {
-    name: 'C',
-    year: 1972
-  },
-  {
-    name: 'Elm',
-    year: 2012
-  }
-];
-
-// Teach Autosuggest how to calculate suggestions for any given input value.
-const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
-
-  return inputLength === 0 ? [] : languages.filter(lang =>
-    lang.name.toLowerCase().slice(0, inputLength) === inputValue
-  );
-};
-
-// When suggestion is clicked, Autosuggest needs to populate the input
-// based on the clicked suggestion. Teach Autosuggest how to calculate the
-// input value for every given suggestion.
-const getSuggestionValue = suggestion => suggestion.name;
-
-// Use your imagination to render suggestions.
-const renderSuggestion = suggestion => (
-  <div>
-    {suggestion.name}
-  </div>
-);
+import Autosuggest from 'react-autosuggest';
 
 class SearchBar extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     // Autosuggest is a controlled component.
     // This means that you need to provide an input value
@@ -50,6 +16,26 @@ class SearchBar extends React.Component {
     };
   }
 
+  getSuggestions = value => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength === 0 ? [] : this.props.searchArray.filter(obj => (obj[this.props.searchKey] !==null) && ((obj[this.props.searchKey].toLowerCase().indexOf(inputValue)) > -1)
+    );
+  };
+
+  getSuggestionValue = suggestion => suggestion[this.props.searchKey];
+
+// loop through all the keys in array and print
+  renderSuggestion = (suggestion) => (
+    <a>
+      {Object.keys(suggestion).map((elm, i) =>
+        <span key={suggestion[this.props.searchKey] + String(i)}>{suggestion[Object.keys(suggestion)[Object.keys(suggestion).length-(Object.keys(suggestion).length-(parseInt(i)))]]
+}</span>
+      )}
+    </a>
+  );
+
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
@@ -60,7 +46,7 @@ class SearchBar extends React.Component {
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
-      suggestions: getSuggestions(value)
+      suggestions: this.getSuggestions(value)
     });
   };
 
@@ -95,8 +81,8 @@ class SearchBar extends React.Component {
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
+        getSuggestionValue={this.getSuggestionValue}
+        renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
         renderInputComponent={renderInputComponent}
       />
