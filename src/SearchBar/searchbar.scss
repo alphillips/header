@@ -60,8 +60,8 @@ $serchhover:              darken(whitesmoke, 10%);
     width: 80%;
     border: 1px solid $border-grey;
     background-color: #fff;
-    font-weight: 300;
-    font-size: 16px;
+    // font-weight: 300;
+    // font-size: 16px;
     z-index: 2;
     color: black;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -72,11 +72,12 @@ $serchhover:              darken(whitesmoke, 10%);
 
     .react-autosuggest__suggestions-list {
       height: auto;
-      max-height: 155px;
+      max-height: 600px;
       overflow-y: scroll;
       li {
         display: block;
         width: 100%;
+        // border-bottom: 1px solid #666;
       }
     }
 
@@ -88,10 +89,10 @@ $serchhover:              darken(whitesmoke, 10%);
         background-color: $serchhover;
       }
       a {
-        color: black;
-        cursor: pointer;
-        padding: 0 10px;
-        font-size: 0.7rem;
+        color: #313131;
+        // cursor: pointer;
+        // padding: 0 10px;
+        // font-size: 0.7rem;
         text-decoration: none;
         border-bottom: none;
 
@@ -100,13 +101,56 @@ $serchhover:              darken(whitesmoke, 10%);
         }
         span {
           margin-left: 5px;
-          font-style: italic;
-          font-size: 0.6rem;
+          // font-style: italic;
+          // font-size: 0.6rem;
           &:first-of-type {
-          font-size: 0.7rem;
+          // font-size: 0.7rem;
           margin-left: 0;
-          font-style: normal;
+          // font-style: normal;
           }
+          // font-weight: 300;
+          color:#666;
+          &.search-bar-results-id{
+            font-weight: 700;
+            color: #313131;
+            &:after {
+              content:"\000A";
+              white-space: pre;
+            }
+          }
+
+          &.search-bar-results-date{
+            margin-left: 20px;
+            &:before {
+              content:"Created ";
+              white-space: pre;
+            }
+            &:after {
+              content:"\000A";
+              white-space: pre;
+            }
+          }
+
+          &.search-bar-results-status{
+            margin-left: 20px;
+            &:before {
+              content:"Status ";
+              white-space: pre;
+            }
+            &:after {
+              content:"\000A";
+              white-space: pre;
+            }
+          }
+
+          &.search-bar-results-destinationCountry{
+            margin-left: 20px;
+            &:before {
+              content:"Export country ";
+              white-space: pre;
+            }
+          }
+
         }
       }
     }
