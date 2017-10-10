@@ -450,3 +450,6 @@ a.staff-home-link:before {
     right: auto;
   }
 }
+*:required {
+  box-shadow: none;
+}

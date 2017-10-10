@@ -388,3 +388,7 @@ a.staff-home-link:before {
     }
   }
 }
+
+*:required {
+  box-shadow: none;
+}
