@@ -26,12 +26,12 @@ class SearchBar extends React.Component {
 
   getSuggestionValue = suggestion => suggestion[this.props.searchKey];
 
-// loop through all the keys in array and print
   renderSuggestion = (suggestion) => (
-    <a>
-      {Object.keys(suggestion).map((elm, i) =>
-        <span key={suggestion[this.props.searchKey] + String(i)}>{suggestion[Object.keys(suggestion)[Object.keys(suggestion).length-(Object.keys(suggestion).length-(parseInt(i)))]]
-}</span>
+    <a href={suggestion.link}>
+      {this.props.searchDisplayAttributes.map(attr =>
+        <span key={attr} className={'search-bar-results-' + attr}>
+          {suggestion[attr]}
+        </span>
       )}
     </a>
   );
