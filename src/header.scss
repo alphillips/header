@@ -49,8 +49,8 @@ nav.global-menu {
   margin-top: 2px;
   margin-bottom: -16px;
   position: relative;
-  // padding-left: 40px;
-  padding: 10px;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .global-menu ul {
@@ -58,6 +58,9 @@ nav.global-menu {
   list-style-type: none;
   padding: 0;
   margin-bottom: 0;
+  width: 100%;
+  display: table;
+  height: 0;
 }
 
 .global-menu ul li {
@@ -66,16 +69,17 @@ nav.global-menu {
   background-color: #343434;
   border: 1px solid #797979;
   border-bottom: 5px solid #823c47;
+  display: table-cell;
+  text-align: center;
 }
 
 nav.global-menu a {
   color: #fff;
   border-bottom: none;
-  padding: 14px 46px;
-  display: inline-block;
-  min-width: 85px;
-  max-width: 85px;
-  text-align: center;
+  padding: 14px 40px;
+  display: block;
+  width: auto;
+  height: 100%;
 
   &.current {
     background-color: #823c47;
@@ -387,8 +391,4 @@ a.staff-home-link:before {
       }
     }
   }
-}
-
-:required {
-  box-shadow: none;
 }
