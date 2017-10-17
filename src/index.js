@@ -122,34 +122,9 @@ class Header extends React.Component {
           </div>
 
           <div className="header-block uikit-grid">
-            <div className="container">
-              <div className="row">
-
-                {/*
-                <div className="header-logo grids col-md-9">
-                  <a href="http://www.agriculture.gov.au/">
-                    <img src={logo} className="header-logo-img" alt="Go to home page" aria-hidden="true" />
-                  </a>
-                </div>
-                */}
-
-                {/*
-                <div className="grids col-md-7">
-                  <nav role="navigation" className="global-menu">
-                   {this.props.menu}
-                  </nav>
-                </div>
-                */}
-
-              </div>
-              <div className="row">
-                <div className="grids col-md-20">
-                  <nav role="navigation" className="global-menu">
-                   {this.props.menu}
-                  </nav>
-                </div>
-              </div>
-            </div>
+            <nav role="navigation" className="global-menu">
+             {this.props.menu}
+            </nav>
           </div>
         </div>
        )
