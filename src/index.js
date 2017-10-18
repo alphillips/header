@@ -51,35 +51,28 @@ class Header extends React.Component {
 
       if(window.IS_STAFF){
         return (
-        <div className="staff-header">
-          {/*<div className="side-menu-container">
-            <Menu isOpen={ this.state.isOpen } className="bm-menu" width={ '50%' } onClick={this.onclick}>
-              <div className="side-menu">
-                {this.props.menu}
+        <div className="staff-header header">
+          <div className="top-menu-header">
+            <div className="top-links-wrapper">
+              <div className="top-links main-block">
+                <ul>
+                  <li><Link to="/" className="staff-home-link">Home</Link></li>
+                  <li className="autocomplete-li-link-search">
+                  {this.props.searchArray &&
+                    <SearchBar
+                      searchArray={this.props.searchArray}
+                      searchKey={this.props.searchKey}
+                      searchDisplayAttributes={this.props.searchDisplayAttributes}
+                    />
+                  }
+                  </li>
+                  <li className="header-app-username">{this.props.userName}</li>
+                  <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                </ul>
               </div>
-            </Menu>
-          </div>*/}
-
-
-          <div className="top-links-wrapper">
-            <div className="top-links main-block">
-              <ul>
-                <li><Link to="/" className="staff-home-link">Home</Link></li>
-                <li className="autocomplete-li-link-search">
-                {this.props.searchArray &&
-                  <SearchBar
-                    searchArray={this.props.searchArray}
-                    searchKey={this.props.searchKey}
-                    searchDisplayAttributes={this.props.searchDisplayAttributes}
-                  />
-                }
-                </li>
-                <li className="header-app-username">{this.props.userName}</li>
-                <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
-              </ul>
             </div>
-            </div>
-          <div className="logo">
+          </div>
+          <div className="logo header-block">
             <h1>{this.props.name}</h1>
             <nav role="navigation" className="global-menu">
              {this.props.menu}
