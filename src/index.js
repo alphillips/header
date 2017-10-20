@@ -73,7 +73,6 @@ class Header extends React.Component {
             </div>
           </div>
           <div className="logo header-block">
-            <h1>{this.props.name}</h1>
             <nav role="navigation" className="global-menu">
              {this.props.menu}
             </nav>
