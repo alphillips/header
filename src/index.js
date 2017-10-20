@@ -12,10 +12,58 @@ import './application-side-menu.css'
 class Header extends React.Component {
 
     constructor(props) {
-        super(props)
-        this.state = {
-          isOpen: false
-        }
+      super(props)
+      this.state = {
+        isOpen: false,
+        isProfileOpen: false,
+        isHelpOpen: false
+      }
+      this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
+      this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
+    }
+
+    onProfileClick = () => {
+      // attach/remove event handler
+      if (!this.state.isProfileOpen ) {
+        document.addEventListener('click', this.handleOutsideClickProfile, false);
+      } else {
+        document.removeEventListener('click', this.handleOutsideClickProfile, false);
+      }
+
+      this.setState((prevState, props) => ({
+        isProfileOpen:!this.state.isProfileOpen
+      }))
+    }
+    
+    onHelpClick = () => {
+      // attach/remove event handler
+      if (!this.state.isHelpOpen) {
+        document.addEventListener('click', this.handleOutsideClickHelp, false);
+      } else {
+        document.removeEventListener('click', this.handleOutsideClickHelp, false);
+      }
+
+      this.setState((prevState, props) => ({
+        isHelpOpen:!this.state.isHelpOpen
+      }))
+    }
+
+    handleOutsideClickProfile = (e) => {
+      // ignore clicks on the component itself
+      if (this.node.contains(e.target)) {
+        return;
+      }
+
+      this.onProfileClick();
+    }
+
+    handleOutsideClickHelp = (e) => {
+      // ignore clicks on the component itself
+      if (this.node.contains(e.target)) {
+        return;
+      }
+
+      this.onHelpClick();
     }
 
     componentDidMount() {
@@ -24,7 +72,7 @@ class Header extends React.Component {
 
     onclick = () => {
       this.setState((prevState, props) => ({
-        isOpen:false
+        isOpen:!this.state.isOpen
       }))
     }
 
@@ -106,9 +154,25 @@ class Header extends React.Component {
                       />
                     }
                   </li>
-                  <li className="header-app-username">{this.props.userName}</li>
-                  <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
+                  <li><a href="/OSS/faces/homePage" className="header-app-inbox"><span></span></a></li>
+                  <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
                 </ul>
+
+                {this.state.isProfileOpen&&
+                  <div className="target-profile-content" ref={node => { this.node = node; }}>
+                    <ul>
+                      <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
+                    </ul>
+                  </div>
+                }
+                {this.state.isHelpOpen&&
+                  <div className="target-help-content" ref={node => { this.node = node; }}>
+                    <ul>
+                      <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Help items</a></li>
+                    </ul>
+                  </div>
+                }
               </div>
             </div>
           </div>
