@@ -285,7 +285,7 @@ nav.bm-item-list {
   margin: 0;
   vertical-align: top;
   height: 0px;
-  width: 107px;
+  width: 90px;
   text-align: right; }
 
 .top-links li.header-app-username.target-caret:after {
@@ -354,7 +354,7 @@ nav.bm-item-list {
 @media screen and (min-width: 992px) {
   .target-profile-content {
     top: 34px;
-    right: 0; } }
+    right: 1.5%; } }
 
 .target-help-content {
   right: 0;

@@ -20,6 +20,7 @@ class Header extends React.Component {
       }
       this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
       this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
+      this.showInbox = this.props.showInbox || false
     }
 
     onProfileClick = () => {
@@ -34,7 +35,7 @@ class Header extends React.Component {
         isProfileOpen:!this.state.isProfileOpen
       }))
     }
-    
+
     onHelpClick = () => {
       // attach/remove event handler
       if (!this.state.isHelpOpen) {
@@ -106,16 +107,19 @@ class Header extends React.Component {
                 <ul>
                   <li><Link to="/" className="staff-home-link">Home</Link></li>
                   <li className="autocomplete-li-link-search">
-                  {this.props.searchArray &&
-                    <SearchBar
-                      searchArray={this.props.searchArray}
-                      searchKey={this.props.searchKey}
-                      searchDisplayAttributes={this.props.searchDisplayAttributes}
-                    />
-                  }
+                    {this.props.searchArray &&
+                      <SearchBar
+                        searchArray={this.props.searchArray}
+                        searchKey={this.props.searchKey}
+                        searchDisplayAttributes={this.props.searchDisplayAttributes}
+                      />
+                    }
                   </li>
-                  <li className="header-app-username">{this.props.userName}</li>
-                  <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Logout</a></li>
+                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
+                  {this.showInbox &&
+                    <li className="header-app-inbox"><a href="#"><span></span></a></li>
+                  }
+                  <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
                 </ul>
               </div>
             </div>
@@ -155,7 +159,9 @@ class Header extends React.Component {
                     }
                   </li>
                   <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
-                  <li><a href="/OSS/faces/homePage" className="header-app-inbox"><span></span></a></li>
+                  {this.showInbox &&
+                    <li><a href="#" className="header-app-inbox"><span></span></a></li>
+                  }
                   <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
                 </ul>
 
