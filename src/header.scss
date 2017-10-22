@@ -1,10 +1,12 @@
-$serchhover:              darken(whitesmoke, 10%);
+$serchhover: darken(whitesmoke, 10%);
 
 .header {
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+}
 
 .header .header-block {
-  padding: 0 2em; }
+  padding: 0 2em;
+}
 
 .uikit-body .header .header-block ul {
   margin-bottom: 0;
@@ -19,7 +21,6 @@ $serchhover:              darken(whitesmoke, 10%);
 
 @media screen and (min-width: 992px) {
   .staff-header .top-links, .staff-header .logo, .top-links {
-    // max-width: 1700px;
     margin-left: auto;
     margin-right: auto; } }
 
@@ -98,12 +99,8 @@ nav.global-menu a {
 
 nav.global-menu a:focus {
   background-color: inherit;
-  // border-color: transparent;
   outline: none;
-  // background-color: #823c47;
   text-decoration: underline;
-  /*border-color: transparent;*/
-  // border-bottom: 4px solid #fff;
   &.current {
     background-color: #823c47;
   }
@@ -112,8 +109,6 @@ nav.global-menu a:focus {
 nav.global-menu a:hover {
   background-color: #823c47;
 }
-  /*border-color: transparent;*/
-  // border-bottom: 4px solid #fff; }
 
 @media screen and (min-width: 1200px) {
   .header .header-block .container {
@@ -142,8 +137,6 @@ nav.bm-item-list {
 }
 
 .side-menu ul a:hover {
-  // background-color: #823c47;
-  /*border-color: transparent;*/
   border-bottom: 4px solid #fff;
 }
 
@@ -154,13 +147,10 @@ nav.bm-item-list {
 
 .nexdoc-header-name {
   font-size: 2em;
-  // border: 2px solid #00759A;
-  // margin-top: 30px;
   margin-top: 10px;
   border-radius: 3px;
   padding: 1px 4px;
   max-width: 150px;
-  // background-color: #4299B4;
   text-align: center;
   color: #fff;
 }
@@ -168,7 +158,6 @@ nav.bm-item-list {
 .top-menu-header .top-links-wrapper {
   background: #343434;
   color: #ffffff;
-  // height: 70px;
   height: 70px;
 
   @media screen and (min-width: 992px) {
@@ -179,6 +168,7 @@ nav.bm-item-list {
 .top-menu-header .top-links {
   display: block;
   margin-left: 40px;
+  position: relative;
 
   @media screen and (min-width: 992px) {
     margin-left: auto;
@@ -282,89 +272,10 @@ nav.bm-item-list {
     }
   }
 
-// .staff-header {
-//   background: #ffffff; }
-  // .staff-header .top-links-wrapper {
-  //   background: #343434;
-  //   color: #ffffff; }
-  // .staff-header .top-links {
-  //   display: block; }
-  // .staff-header .top-links a {
-  //   color: #ffffff;
-  //   border-bottom: none;
-  //   font-size: .8rem;
-  //   padding: 9px 12px; }
-  // .staff-header .top-links a:focus {
-  //   background: #fff899;
-  //   color: #343434; }
-  // .staff-header .top-links a:hover {
-  //   background: #fff899;
-  //   color: #343434; }
-  // .staff-header .top-links ul {
-  //   padding: 0;
-  //   margin: 0; }
-  // .staff-header .top-links li {
-  //   list-style: none;
-  //   display: inline-block; }
-//   .staff-header .logo {
-//     display: block;
-//     margin: 0 auto; }
-//   .staff-header .logo h1 {
-//     margin-top: 0;
-//     padding-top: 0.5em;
-//     padding-bottom: 0.2em;
-//     margin-bottom: 0; }
-//   .staff-header nav.global-menu {
-//     display: inline-block;
-//     margin-top: 2px;
-//     margin-bottom: -16px;
-//     position: relative;
-//     padding: 10px 0; }
-//   .staff-header .global-menu ul {
-//     margin-top: 0;
-//     list-style-type: none;
-//     padding: 0;
-//     margin-bottom: 0; }
-//   .staff-header .global-menu ul li {
-//     border: 0;
-//     display: inline-block;
-//     background-color: #fff;
-//     border: 1px solid #e1e1e1;
-//     border-bottom: 5px solid #1B7991; }
-//   .staff-header nav.global-menu a {
-//     color: #313131;
-//     border-bottom: none;
-//     padding: 14px 25px;
-//     display: inline-block;
-//     min-width: 85px;
-//     max-width: 85px;
-//     text-align: center; }
-//     .staff-header nav.global-menu a.current {
-//       color: #fff;
-//       background-color: #1B7991; }
-//   .staff-header nav.global-menu a:focus {
-//     background-color: inherit;
-//     outline: none;
-//     text-decoration: underline; }
-//     .staff-header nav.global-menu a:focus.current {
-//       color: #fff;
-//       background-color: #1B7991; }
-//   .staff-header nav.global-menu a:hover {
-//     color: #fff;
-//     background-color: #1B7991; }
-
-a.staff-home-link:before {
-  content: " ";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin: 0 .4em -6px .16em;
-  background-image: url(home.svg);
-  background-repeat: no-repeat; }
-
 .top-links {
   &.main-block {
     background-color: transparent;
+    padding-right:0;
   }
   ul {
     height: 100%;
@@ -384,21 +295,49 @@ a.staff-home-link:before {
       margin-left: 20px;
       @media screen and (min-width: 992px) {
         margin-top: 3px;
+        margin-right: 3px;
         width: auto;
       }
     }
     &.header-app-username {
-      margin-left: 10px;
-      font-size: 0.8rem;
-      margin: 0 5px 0 15px;
-      white-space: nowrap;
-      text-align: right;
+      position: relative;
       width: auto;
-      max-width: 23%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      vertical-align: middle;
+      max-width: 12%;
+      margin: 0;
+      vertical-align: top;
+      height: 0px;
+      width: 90px;
+      text-align: right;
+
+      &.target-caret:after{
+        top: 17px;
+      }
+
+      a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        margin: 0;
+        padding: 6px 25px;
+        padding-left: 0;
+
+        .desktop-profile {
+          display: none;
+          @media screen and (min-width: 992px) {
+            display: inline-block;
+          }
+        }
+        .mobile-profile {
+          @extend .header-icon;
+          background-image: url(profile.svg);
+          @media screen and (min-width: 992px) {
+            display: none!important;
+          }
+        }
+      }
     }
     &.logout-li-link-staff {
       position: absolute;
@@ -412,4 +351,112 @@ a.staff-home-link:before {
       }
     }
   }
+}
+
+.target-caret:after {
+  border: none;
+  @media screen and (min-width: 992px) {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    content:'';
+    position: absolute;
+    top: 12px;
+    opacity: 0.7;
+    cursor: pointer;
+    display: block;
+    right: 5px;
+    pointer-events:none;
+  }
+}
+
+.target-profile-content {
+  top: 100%;
+  right: 0;
+  @extend .header-menu-content;
+    @media screen and (min-width: 992px) {
+    top: 34px;
+    right: 1.5%;
+    }
+}
+.target-help-content {
+  right: 0;
+  top: 100%;
+  @extend .header-menu-content;
+  @media screen and (min-width: 992px) {
+    top: 34px;
+    right: 17%;
+  }
+}
+.header-app-help {
+  position: relative;
+  a {
+    padding: 6px 12px;
+  }
+}
+
+// don't modify this, only for extend
+.header-menu-content {
+  position: absolute;
+  text-decoration: none;
+  width: 160px;
+  min-height: 30px;
+  background-color: white;
+  color: #333;
+  font-size: 0.8rem;
+  z-index: 1;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+      cursor: pointer;
+      margin-bottom: 0!important;
+      padding: 5px 0;
+      margin-top: 0;
+      width: 100%;
+      &:hover, &:visited, &:hover {
+        background-color: $serchhover;
+      }
+      a {
+        border-bottom: 0;
+        color: #333!important;
+        &:hover, &:visited, &:hover {
+          background-color: $serchhover!important;
+        }
+      }
+    }
+  }
+}
+
+// don't modify this, only for extend
+.header-icon {
+  content: " ";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 .4em -8px .16em;
+  background-repeat: no-repeat;
+  background-size: auto 22px;
+  pointer-events:none;
+}
+
+.target-help:before {
+  @extend .header-icon;
+  background-image: url(help.svg);
+}
+
+.header-app-inbox:before {
+  @extend .header-icon;
+  background-image: url(tray.svg);
+}
+
+.staff-home-link:before {
+  @extend .header-icon;
+  background-image: url(home.svg);
 }
