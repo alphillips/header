@@ -460,3 +460,8 @@ nav.bm-item-list {
   @extend .header-icon;
   background-image: url(home.svg);
 }
+
+//removing required box-shadow in firefox
+:required {
+  box-shadow: none;
+}
