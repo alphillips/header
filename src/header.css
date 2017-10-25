@@ -423,3 +423,6 @@ nav.bm-item-list {
 
 .staff-home-link:before {
   background-image: url(home.svg); }
+
+:required {
+  box-shadow: none; }
