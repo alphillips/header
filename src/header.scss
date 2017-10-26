@@ -293,10 +293,20 @@ nav.bm-item-list {
     }
     &.autocomplete-li-link-search{
       margin-left: 20px;
+      width: 170px;
       @media screen and (min-width: 992px) {
         margin-top: 3px;
         margin-right: 3px;
-        width: auto;
+      }
+    }
+    &.header-app-inbox-container{
+      width: 40px;
+    }
+    &.header-app-help {
+      position: relative;
+      width: 60px;
+      a {
+        padding: 6px 12px;
       }
     }
     &.header-app-username {
@@ -310,9 +320,8 @@ nav.bm-item-list {
       text-align: right;
 
       &.target-caret:after{
-        top: 17px;
+        top: 14px;
       }
-
       a {
         font-size: 0.8rem;
         white-space: nowrap;
@@ -322,7 +331,7 @@ nav.bm-item-list {
         display: block;
         margin: 0;
         padding: 6px 25px;
-        padding-left: 0;
+        padding-left: 5px;
 
         .desktop-profile {
           display: none;
@@ -390,12 +399,7 @@ nav.bm-item-list {
     right: 17%;
   }
 }
-.header-app-help {
-  position: relative;
-  a {
-    padding: 6px 12px;
-  }
-}
+
 
 // don't modify this, only for extend
 .header-menu-content {
