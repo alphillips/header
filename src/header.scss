@@ -401,7 +401,7 @@ nav.bm-item-list {
 }
 
 
-// don't modify this, only for extend
+// don't modify header-menu-content directly, used for extend
 .header-menu-content {
   position: absolute;
   text-decoration: none;
@@ -438,7 +438,7 @@ nav.bm-item-list {
   }
 }
 
-// don't modify this, only for extend
+// don't modify header-icon directly, used for extend
 .header-icon {
   content: " ";
   display: inline-block;
