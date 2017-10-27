@@ -15,7 +15,8 @@
     "clean": "nwb clean-module && nwb clean-demo",
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "start": "npm run watch-css && nwb serve-react-demo",
+    "start-demo": "nwb serve-react-demo",
+    "start": "npm run start-demo | npm run watch-css",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
