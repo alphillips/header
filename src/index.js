@@ -115,10 +115,12 @@ class Header extends React.Component {
                       />
                     }
                   </li>
+                  <li className="header-app-inbox-container">
+                    {this.showInbox &&
+                      <a href="#" className="header-app-inbox"><span></span></a>
+                    }
+                  </li>
                   <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
-                  {this.showInbox &&
-                    <li className="header-app-inbox"><a href="#"><span></span></a></li>
-                  }
                   <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
                 </ul>
               </div>
@@ -158,10 +160,12 @@ class Header extends React.Component {
                       />
                     }
                   </li>
-                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
+                  <li className="header-app-inbox-container">
                   {this.showInbox &&
-                    <li><a href="#" className="header-app-inbox"><span></span></a></li>
+                    <a href="#" className="header-app-inbox"><span></span></a>
                   }
+                  </li>
+                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
                   <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
                 </ul>
 

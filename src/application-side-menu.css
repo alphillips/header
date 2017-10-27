@@ -10,11 +10,6 @@
   left: 10px;
   top: 20px;
   display: block; }
-  @media screen and (min-width: 992px) {
-    .bm-burger-button {
-      display: none;
-    }
-  }
 
 @media screen and (min-width: 992px) {
   .bm-burger-button {
