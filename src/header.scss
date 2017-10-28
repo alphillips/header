@@ -306,7 +306,7 @@ nav.bm-item-list {
     }
     &.header-app-help {
       position: relative;
-      width: 60px;
+      width: 55px;
       a {
         text-align: right
       }
@@ -319,9 +319,9 @@ nav.bm-item-list {
       width: 15px;
       max-width:inherit;
       @media screen and (min-width: 992px) {
-        width: 139px;
+        width: 153px;
         text-align: right;
-        max-width: 16%;
+        max-width: 17%;
       }
 
       &.target-caret:after{
@@ -398,7 +398,7 @@ nav.bm-item-list {
   @extend .header-menu-content;
     @media screen and (min-width: 992px) {
     top: 34px;
-    right: 1.5%;
+    right: 0.8%;
     }
 }
 .target-help-content {
@@ -407,7 +407,7 @@ nav.bm-item-list {
   @extend .header-menu-content;
   @media screen and (min-width: 992px) {
     top: 34px;
-    right: 17%;
+    right: 18%;
   }
 }
 
@@ -449,13 +449,13 @@ nav.bm-item-list {
   }
 }
 
-// don't modify header-icon directly, used for extend
+// don't modify header-icon directly, use extend
 .header-icon {
   content: " ";
   display: inline-block;
   width: 24px;
   height: 24px;
-  margin: 0 .4em -8px .16em;
+  margin: 0 .4em -8px 0;
   background-repeat: no-repeat;
   background-size: auto 22px;
   pointer-events:none;
