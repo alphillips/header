@@ -395,15 +395,27 @@ nav.bm-item-list {
 .target-profile-content {
   top: 100%;
   right: 0;
+  p {
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 0;
+    font-size: 80%;
+
+    &:nth-of-type(2) {
+      border-bottom: 1px solid $serchhover;
+      padding-bottom: 5px;
+    }
+  }
   @extend .header-menu-content;
-    @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     top: 34px;
     right: 0.8%;
-    }
+  }
 }
 .target-help-content {
   right: 0;
   top: 100%;
+
   @extend .header-menu-content;
   @media screen and (min-width: 992px) {
     top: 34px;
@@ -412,7 +424,7 @@ nav.bm-item-list {
 }
 
 
-// don't modify header-menu-content directly, used for extend
+// don't modify header-menu-content directly, use extend
 .header-menu-content {
   position: absolute;
   text-decoration: none;
@@ -442,7 +454,9 @@ nav.bm-item-list {
         border-bottom: 0;
         color: #333!important;
         &:hover, &:visited, &:hover {
-          background-color: $serchhover!important;
+          background-color: transparent!important;
+          text-decoration: none!important;
+          border-bottom: 0!important;
         }
       }
     }

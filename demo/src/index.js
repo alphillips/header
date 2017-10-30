@@ -23,6 +23,8 @@ let Demo = React.createClass({
         }
         name="Heading"
         userName="Demo User"
+        abn="abn1234"
+        email="demo.user@gamil.com"
       />
     </div>
   }

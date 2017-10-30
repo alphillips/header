@@ -58,7 +58,7 @@ class Header extends React.Component {
       if (this.node.contains(e.target)) {
         return;
       }
-      this.onProfileClick(e);
+      this.onProfileClick(e)
     }
 
     handleOutsideClickHelp = (e) => {
@@ -66,7 +66,7 @@ class Header extends React.Component {
       if (this.node.contains(e.target)) {
         return;
       }
-      this.onHelpClick(e);
+      this.onHelpClick(e)
     }
 
     componentDidMount() {
@@ -137,20 +137,31 @@ class Header extends React.Component {
                 }
                 </li>
                 <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
-                <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick.bind(this)}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
+                <li className="header-app-username target-caret">
+                  <a href="#" onClick={this.onProfileClick.bind(this)}>
+                    <span className="desktop-profile">{this.props.userName}</span>
+                    <span className="mobile-profile"></span>
+                  </a>
+                </li>
               </ul>
 
-              {this.state.isProfileOpen&&
+              {this.state.isProfileOpen &&
                 <div className="target-profile-content" ref={node => { this.node = node; }}>
+                  {this.props.abn &&
+                    <p>ABN: {this.props.abn}</p>
+                  }
+                  {this.props.email &&
+                    <p>Email: {this.props.email}</p>
+                  }
                   <ul>
                     <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
                   </ul>
                 </div>
               }
-              {this.state.isHelpOpen&&
+              {this.state.isHelpOpen &&
                 <div className="target-help-content" ref={node => { this.node = node; }}>
                   <ul>
-                    <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Help items</a></li>
+                    <li className="help-item"><a href="#">Help items</a></li>
                   </ul>
                 </div>
               }
