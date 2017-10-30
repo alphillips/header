@@ -37,7 +37,6 @@ class Header extends React.Component {
         isProfileOpen:!this.state.isProfileOpen
       }))
       e.preventDefault()
-      return false
     }
 
     onHelpClick = (e) => {
@@ -52,8 +51,6 @@ class Header extends React.Component {
         isHelpOpen:!this.state.isHelpOpen
       }))
       e.preventDefault()
-      return false
-
     }
 
     handleOutsideClickProfile = (e) => {
