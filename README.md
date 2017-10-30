@@ -24,14 +24,14 @@ import Header from '@react-ag-components/header'
 
 | prop        | Type           | Note  |
 | ------------- |:-------------:| -----:|
-| showInbox      | boolean | $1600 |
+| showInbox      | boolean | inbox search visibility |
 | menu     | object      |   {<ul><li>...} |
 | abn | string      |  abn number   |
 | userName | string      |    their logon id, normally their email |
-| name | page heading      |     |
-| searchArray |  JSON     |    array to search on |
-| searchKey |   string   |    field name |
-| searchDisplayAttributes | array      |    search fields to show |
+| name | string      | page heading    |
+| searchArray |  JSON Array     |    array to search on |
+| searchKey |   string   |    "id"|
+| searchDisplayAttributes | array      |    ['id','status','date','destinationCountry'] |
 
 
 ## Contributing
