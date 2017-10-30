@@ -6,7 +6,7 @@ import './base.css'
 
 import Header from '../../src'
 
-window.IS_STAFF = true
+// window.IS_STAFF = true
 
 let Demo = React.createClass({
   render() {
