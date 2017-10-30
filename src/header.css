@@ -271,6 +271,9 @@ nav.bm-item-list {
   .top-links li.header-app-name {
     text-align: center; } }
 
+.top-links li.home-portal {
+  width: 128px; }
+
 .top-links li.autocomplete-li-link-search {
   margin-left: 20px;
   width: 170px; }
@@ -375,8 +378,7 @@ nav.bm-item-list {
   right: 0; }
 
 .target-profile-content p {
-  padding-left: 10px;
-  padding-top: 5px;
+  padding: 5px 10px;
   margin-bottom: 0;
   font-size: 80%; }
 
@@ -401,7 +403,8 @@ nav.bm-item-list {
 .header-menu-content, .target-profile-content, .target-help-content {
   position: absolute;
   text-decoration: none;
-  width: 160px;
+  min-width: 160px;
+  width: auto;
   min-height: 30px;
   background-color: white;
   color: #333;

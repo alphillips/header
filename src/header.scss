@@ -293,6 +293,9 @@ nav.bm-item-list {
         text-align: center;
       }
     }
+    &.home-portal {
+      width: 128px;
+    }
     &.autocomplete-li-link-search{
       margin-left: 20px;
       width: 170px;
@@ -393,11 +396,11 @@ nav.bm-item-list {
 }
 
 .target-profile-content {
+  @extend .header-menu-content;
   top: 100%;
   right: 0;
   p {
-    padding-left: 10px;
-    padding-top: 5px;
+    padding: 5px 10px;
     margin-bottom: 0;
     font-size: 80%;
 
@@ -406,7 +409,6 @@ nav.bm-item-list {
       padding-bottom: 5px;
     }
   }
-  @extend .header-menu-content;
   @media screen and (min-width: 992px) {
     top: 34px;
     right: 0.8%;
@@ -428,7 +430,8 @@ nav.bm-item-list {
 .header-menu-content {
   position: absolute;
   text-decoration: none;
-  width: 160px;
+  min-width: 160px;
+  width: auto;
   min-height: 30px;
   background-color: white;
   color: #333;

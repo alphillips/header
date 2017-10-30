@@ -112,9 +112,9 @@ class Header extends React.Component {
           <div className="top-links-wrapper">
             <div className="top-links main-block">
               <ul>
-                <li>
+                <li className="home-portal">
                 {window.IS_STAFF &&
-                  <Link to="/" className="staff-home-link">Home Portal</Link>
+                  <Link to="/" className="staff-home-link">Home</Link>
                 }
                 {!window.IS_STAFF &&
                   <a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a>
@@ -151,7 +151,7 @@ class Header extends React.Component {
                     <p>ABN: {this.props.abn}</p>
                   }
                   {this.props.email &&
-                    <p>Email: {this.props.email}</p>
+                    <p>User Name: {this.props.email}</p>
                   }
                   <ul>
                     <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
