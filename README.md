@@ -22,6 +22,17 @@ import Header from '@react-ag-components/header'
 
 ### Properties
 
+| prop        | Type           | Note  |
+| ------------- |:-------------:| -----:|
+| showInbox      | boolean | $1600 |
+| menu     | object      |   {<ul><li>...} |
+| abn | string      |  abn number   |
+| userName | string      |    their logon id, normally their email |
+| name | page heading      |     |
+| searchArray |  JSON     |    array to search on |
+| searchKey |   string   |    field name |
+| searchDisplayAttributes | array      |    search fields to show |
+
 
 ## Contributing
 
