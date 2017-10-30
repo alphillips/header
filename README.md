@@ -40,6 +40,11 @@ Run the project
 npm start
 ```
 
+Run the app in staff mode
+```
+REACT_APP_IS_STAFF=true npm start
+```
+
 ### Deploy to npm
 #### Build
 `npm run build -- --copy-files`
