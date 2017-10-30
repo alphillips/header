@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/header",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "header React component",
   "main": "lib/index.js",
   "module": "es/index.js",

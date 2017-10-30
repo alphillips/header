@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from 'react-burger-menu/lib/menus/slide'
+import MenuSlide from 'react-burger-menu/lib/menus/slide'
 import SearchBar from './SearchBar'
 import { Link, hashHistory } from 'react-router'
 
@@ -20,10 +20,12 @@ class Header extends React.Component {
       }
       this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
       this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
+      this.onHelpClick = this.onHelpClick.bind(this)
+      this.onProfileClick = this.onProfileClick.bind(this)
       this.showInbox = this.props.showInbox || false
     }
 
-    onProfileClick = () => {
+    onProfileClick = (e) => {
       // attach/remove event handler
       if (!this.state.isProfileOpen ) {
         document.addEventListener('click', this.handleOutsideClickProfile, false);
@@ -34,9 +36,11 @@ class Header extends React.Component {
       this.setState((prevState, props) => ({
         isProfileOpen:!this.state.isProfileOpen
       }))
+      e.preventDefault()
+      return false
     }
 
-    onHelpClick = () => {
+    onHelpClick = (e) => {
       // attach/remove event handler
       if (!this.state.isHelpOpen) {
         document.addEventListener('click', this.handleOutsideClickHelp, false);
@@ -47,6 +51,9 @@ class Header extends React.Component {
       this.setState((prevState, props) => ({
         isHelpOpen:!this.state.isHelpOpen
       }))
+      e.preventDefault()
+      return false
+
     }
 
     handleOutsideClickProfile = (e) => {
@@ -54,8 +61,7 @@ class Header extends React.Component {
       if (this.node.contains(e.target)) {
         return;
       }
-
-      this.onProfileClick();
+      this.onProfileClick(e);
     }
 
     handleOutsideClickHelp = (e) => {
@@ -63,8 +69,7 @@ class Header extends React.Component {
       if (this.node.contains(e.target)) {
         return;
       }
-
-      this.onHelpClick();
+      this.onHelpClick(e);
     }
 
     componentDidMount() {
@@ -100,24 +105,24 @@ class Header extends React.Component {
       return (
       <div className={(window.IS_STAFF) ? "staff-header header":"header"}>
         <div className="side-menu-container">
-          <Menu isOpen={ this.state.isOpen } className="bm-menu" width={ '50%' } onClick={this.onclick}>
+          <MenuSlide isOpen={ this.state.isOpen } className="bm-menu" width={ '50%' } onClick={this.onclick}>
             <div className="side-menu">
               {this.props.menu}
             </div>
-          </Menu>
+          </MenuSlide>
         </div>
         <div className="top-menu-header">
           <div className="top-links-wrapper">
             <div className="top-links main-block">
               <ul>
-              <li>
-              {window.IS_STAFF &&
-                <Link to="/" className="staff-home-link">Home Portal</Link>
-              }
-              {!window.IS_STAFF &&
-                <a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a>
-              }
-              </li>
+                <li>
+                {window.IS_STAFF &&
+                  <Link to="/" className="staff-home-link">Home Portal</Link>
+                }
+                {!window.IS_STAFF &&
+                  <a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a>
+                }
+                </li>
 
                 <li className="header-app-name">{this.props.name}</li>
                 <li className="autocomplete-li-link-search">
@@ -131,11 +136,11 @@ class Header extends React.Component {
                 </li>
                 <li className="header-app-inbox-container">
                 {this.showInbox &&
-                  <a href="#" className="header-app-inbox"><span></span></a>
+                  <a className="header-app-inbox"><span></span></a>
                 }
                 </li>
-                <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
-                <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
+                <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
+                <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick.bind(this)}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
               </ul>
 
               {this.state.isProfileOpen&&
