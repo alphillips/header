@@ -106,6 +106,8 @@ class Header extends React.Component {
               <div className="top-links main-block">
                 <ul>
                   <li><Link to="/" className="staff-home-link">Home</Link></li>
+
+                  <li className="header-app-name">{this.props.name}</li>
                   <li className="autocomplete-li-link-search">
                     {this.props.searchArray &&
                       <SearchBar
