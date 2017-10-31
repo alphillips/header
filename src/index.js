@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from 'react-burger-menu/lib/menus/slide'
+import MenuSlide from 'react-burger-menu/lib/menus/slide'
 import SearchBar from './SearchBar'
 import { Link, hashHistory } from 'react-router'
 
@@ -20,10 +20,12 @@ class Header extends React.Component {
       }
       this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
       this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
+      this.onHelpClick = this.onHelpClick.bind(this)
+      this.onProfileClick = this.onProfileClick.bind(this)
       this.showInbox = this.props.showInbox || false
     }
 
-    onProfileClick = () => {
+    onProfileClick = (e) => {
       // attach/remove event handler
       if (!this.state.isProfileOpen ) {
         document.addEventListener('click', this.handleOutsideClickProfile, false);
@@ -34,9 +36,10 @@ class Header extends React.Component {
       this.setState((prevState, props) => ({
         isProfileOpen:!this.state.isProfileOpen
       }))
+      e.preventDefault()
     }
 
-    onHelpClick = () => {
+    onHelpClick = (e) => {
       // attach/remove event handler
       if (!this.state.isHelpOpen) {
         document.addEventListener('click', this.handleOutsideClickHelp, false);
@@ -47,6 +50,7 @@ class Header extends React.Component {
       this.setState((prevState, props) => ({
         isHelpOpen:!this.state.isHelpOpen
       }))
+      e.preventDefault()
     }
 
     handleOutsideClickProfile = (e) => {
@@ -54,8 +58,7 @@ class Header extends React.Component {
       if (this.node.contains(e.target)) {
         return;
       }
-
-      this.onProfileClick();
+      this.onProfileClick(e)
     }
 
     handleOutsideClickHelp = (e) => {
@@ -63,8 +66,7 @@ class Header extends React.Component {
       if (this.node.contains(e.target)) {
         return;
       }
-
-      this.onHelpClick();
+      this.onHelpClick(e)
     }
 
     componentDidMount() {
@@ -97,107 +99,83 @@ class Header extends React.Component {
     }
 
     render() {
-
-      if(window.IS_STAFF){
-        return (
-        <div className="staff-header header">
-          <div className="top-menu-header">
-            <div className="top-links-wrapper">
-              <div className="top-links main-block">
-                <ul>
-                  <li><Link to="/" className="staff-home-link">Home</Link></li>
-
-                  <li className="header-app-name">{this.props.name}</li>
-                  <li className="autocomplete-li-link-search">
-                    {this.props.searchArray &&
-                      <SearchBar
-                        searchArray={this.props.searchArray}
-                        searchKey={this.props.searchKey}
-                        searchDisplayAttributes={this.props.searchDisplayAttributes}
-                      />
-                    }
-                  </li>
-                  <li className="header-app-inbox-container">
-                    {this.showInbox &&
-                      <a href="#" className="header-app-inbox"><span></span></a>
-                    }
-                  </li>
-                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
-                  <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
-                </ul>
-              </div>
+      return (
+      <div className={(window.IS_STAFF) ? "staff-header header":"header"}>
+        <div className="side-menu-container">
+          <MenuSlide isOpen={ this.state.isOpen } className="bm-menu" width={ '50%' } onClick={this.onclick}>
+            <div className="side-menu">
+              {this.props.menu}
             </div>
-          </div>
-          <div className="logo header-block">
-            <nav role="navigation" className="global-menu">
-             {this.props.menu}
-            </nav>
-          </div>
-
+          </MenuSlide>
         </div>
-       )
-      } else {
+        <div className="top-menu-header">
+          <div className="top-links-wrapper">
+            <div className="top-links main-block">
+              <ul>
+                <li className="home-portal">
+                {window.IS_STAFF &&
+                  <Link to="/" className="staff-home-link">Home</Link>
+                }
+                {!window.IS_STAFF &&
+                  <a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a>
+                }
+                </li>
 
-        return (
-        <div className="header">
-          <div className="side-menu-container">
-            <Menu isOpen={ this.state.isOpen } className="bm-menu" width={ '50%' } onClick={this.onclick}>
-              <div className="side-menu">
-                {this.props.menu}
-              </div>
-            </Menu>
-          </div>
-          <div className="top-menu-header">
-            <div className="top-links-wrapper">
-              <div className="top-links main-block">
-                <ul>
-                  <li><a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a></li>
-                  <li className="header-app-name">{this.props.name}</li>
-                  <li className="autocomplete-li-link-search">
-                    {this.props.searchArray &&
-                      <SearchBar
-                        searchArray={this.props.searchArray}
-                        searchKey={this.props.searchKey}
-                        searchDisplayAttributes={this.props.searchDisplayAttributes}
-                      />
-                    }
-                  </li>
-                  <li className="header-app-inbox-container">
-                  {this.showInbox &&
-                    <a href="#" className="header-app-inbox"><span></span></a>
+                <li className="header-app-name">{this.props.name}</li>
+                <li className="autocomplete-li-link-search">
+                  {this.props.searchArray &&
+                    <SearchBar
+                      searchArray={this.props.searchArray}
+                      searchKey={this.props.searchKey}
+                      searchDisplayAttributes={this.props.searchDisplayAttributes}
+                    />
                   }
-                  </li>
-                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
-                  <li className="header-app-username target-caret"><a href="#" onClick={this.onProfileClick}><span className="desktop-profile">{this.props.userName}</span><span className="mobile-profile"></span></a></li>
-                </ul>
+                </li>
+                <li className="header-app-inbox-container">
+                {this.showInbox &&
+                  <a className="header-app-inbox"><span></span></a>
+                }
+                </li>
+                <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
+                <li className="header-app-username target-caret">
+                  <a href="#" onClick={this.onProfileClick.bind(this)}>
+                    <span className="desktop-profile">{this.props.userName}</span>
+                    <span className="mobile-profile"></span>
+                  </a>
+                </li>
+              </ul>
 
-                {this.state.isProfileOpen&&
-                  <div className="target-profile-content" ref={node => { this.node = node; }}>
-                    <ul>
-                      <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
-                    </ul>
-                  </div>
-                }
-                {this.state.isHelpOpen&&
-                  <div className="target-help-content" ref={node => { this.node = node; }}>
-                    <ul>
-                      <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Help items</a></li>
-                    </ul>
-                  </div>
-                }
-              </div>
+              {this.state.isProfileOpen &&
+                <div className="target-profile-content" ref={node => { this.node = node; }}>
+                  {this.props.abn &&
+                    <p>ABN: {this.props.abn}</p>
+                  }
+                  {this.props.email &&
+                    <p>User Name: {this.props.email}</p>
+                  }
+                  <ul>
+                    <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
+                  </ul>
+                </div>
+              }
+              {this.state.isHelpOpen &&
+                <div className="target-help-content" ref={node => { this.node = node; }}>
+                  <ul>
+                    <li className="help-item"><a href="#">Help items</a></li>
+                  </ul>
+                </div>
+              }
             </div>
           </div>
-
-          <div className="header-block uikit-grid">
-            <nav role="navigation" className="global-menu">
-             {this.props.menu}
-            </nav>
-          </div>
         </div>
-       )
 
-      }
+        <div className="header-block">
+          <nav role="navigation" className="global-menu">
+           {this.props.menu}
+          </nav>
+        </div>
+      </div>
+     )
 
    }
 }

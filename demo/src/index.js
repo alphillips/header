@@ -6,7 +6,7 @@ import './base.css'
 
 import Header from '../../src'
 
-
+// window.IS_STAFF = true
 
 let Demo = React.createClass({
   render() {
@@ -23,6 +23,8 @@ let Demo = React.createClass({
         }
         name="Heading"
         userName="Demo User"
+        abn="abn1234"
+        email="demo.user@gamil.com"
       />
     </div>
   }

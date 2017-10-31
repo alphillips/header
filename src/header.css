@@ -261,6 +261,8 @@ nav.bm-item-list {
     @media (min-width: 768px) {
       .top-links li.header-app-name {
         text-align: center; } }
+  .top-links li.home-portal {
+    width: 128px; }
   .top-links li.autocomplete-li-link-search {
     margin-left: 20px;
     width: 170px; }
@@ -347,6 +349,13 @@ nav.bm-item-list {
 .target-profile-content {
   top: 100%;
   right: 0; }
+  .target-profile-content p {
+    padding: 5px 10px;
+    margin-bottom: 0;
+    font-size: 80%; }
+    .target-profile-content p:nth-of-type(2) {
+      border-bottom: 1px solid gainsboro;
+      padding-bottom: 5px; }
   @media screen and (min-width: 992px) {
     .target-profile-content {
       top: 34px;
@@ -363,7 +372,8 @@ nav.bm-item-list {
 .header-menu-content, .target-profile-content, .target-help-content {
   position: absolute;
   text-decoration: none;
-  width: 160px;
+  min-width: 160px;
+  width: auto;
   min-height: 30px;
   background-color: white;
   color: #333;
@@ -387,7 +397,9 @@ nav.bm-item-list {
         border-bottom: 0;
         color: #333 !important; }
         .header-menu-content ul li a:hover, .target-profile-content ul li a:hover, .target-help-content ul li a:hover, .header-menu-content ul li a:visited, .target-profile-content ul li a:visited, .target-help-content ul li a:visited, .header-menu-content ul li a:hover, .target-profile-content ul li a:hover, .target-help-content ul li a:hover {
-          background-color: gainsboro !important; }
+          background-color: transparent !important;
+          text-decoration: none !important;
+          border-bottom: 0 !important; }
 
 .header-icon, .top-links li.header-app-username a .mobile-profile, .target-help:before, .header-app-inbox:before, .staff-home-link:before {
   content: " ";
