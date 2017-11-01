@@ -133,7 +133,9 @@ class Header extends React.Component {
                 </li>
                 <li className="header-app-inbox-container">
                 {this.showInbox &&
-                  <a className="header-app-inbox"><span></span></a>
+                  <a href="{this.props.inbox-url}" className="header-app-inbox">
+                    <span className="unread-count">5</span>
+                  </a>
                 }
                 </li>
                 <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>

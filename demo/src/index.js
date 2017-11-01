@@ -25,6 +25,8 @@ let Demo = React.createClass({
         userName="Demo User"
         abn="abn1234"
         email="demo.user@gamil.com"
+        showInbox={true}
+        inbox-url="{inbox}"
       />
     </div>
   }
