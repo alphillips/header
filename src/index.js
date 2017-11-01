@@ -117,7 +117,7 @@ class Header extends React.Component {
                   <Link to="/" className="staff-home-link">Home</Link>
                 }
                 {!window.IS_STAFF &&
-                  <a href="/OSS/faces/homePage" className="staff-home-link">Client portal</a>
+                  <a href="/portal" className="staff-home-link">Client portal</a>
                 }
                 </li>
 
