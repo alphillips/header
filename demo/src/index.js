@@ -26,7 +26,7 @@ let Demo = React.createClass({
         abn="abn1234"
         email="demo.user@gamil.com"
         showInbox={true}
-        inbox-url="{inbox}"
+        unreadCount="5"
       />
     </div>
   }
