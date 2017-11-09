@@ -284,6 +284,11 @@ nav.bm-item-list {
     margin-top: 3px;
     margin-bottom: 0;
     margin-left: 0;
+    a {
+      &:focus{
+        outline: 0!important;
+      }
+    }
     &.header-app-name {
       vertical-align: top;
       overflow: hidden;
