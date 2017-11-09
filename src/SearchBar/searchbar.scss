@@ -14,7 +14,7 @@ $serchhover:              darken(whitesmoke, 10%);
     font-size: 0.8rem;
     border: 1px solid $border-grey;
     padding-left: 22px;
-    width: 100%;
+    width: inherit;
     border-radius: 12px;
 
     &::-webkit-search-cancel-button,
