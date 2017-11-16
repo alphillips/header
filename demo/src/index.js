@@ -34,10 +34,12 @@ let Demo = React.createClass({
         }
         name="Heading"
         userName="Demo User"
-        abn="abn12345"
+        abn="abn1234"
         logonId="demo.user@gmail.com"
         orgName="Organisation Name"
         otherInfo = {otherInfo}
+        showInbox={true}
+        unreadCount="5"
       />
     </div>
   }
