@@ -150,8 +150,8 @@ class Header extends React.Component {
                   {this.props.abn &&
                     <p>ABN: {this.props.abn}</p>
                   }
-                  {this.props.logonid &&
-                    <p>User Name: {this.props.logonid}</p>
+                  {this.props.logonId &&
+                    <p>User Name: {this.props.logonId}</p>
                   }
                   {this.props.orgName &&
                     <p>Org Name: {this.props.orgName}</p>

@@ -28,7 +28,7 @@ import Header from '@react-ag-components/header'
 | menu     | object      |   <ul><li>... |
 | abn | string      |  abn number   |
 | userName | string      |    firstname + lastname |
-| logonid | string      |    their logon id, normally their email |
+| logonId | string      |    their logon id, normally their email |
 | orgName | string      |    organisation name |
 | otherInfo | Object Array with field "label" and "value"      |    ["label": "labelVal", "value": "valueVal"] |
 | name | string      | page heading    |

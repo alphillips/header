@@ -35,7 +35,7 @@ let Demo = React.createClass({
         name="Heading"
         userName="Demo User"
         abn="abn12345"
-        logonid="demo.user@gmail.com"
+        logonId="demo.user@gmail.com"
         orgName="Organisation Name"
         otherInfo = {otherInfo}
       />
