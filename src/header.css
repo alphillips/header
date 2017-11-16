@@ -351,7 +351,7 @@ nav.bm-item-list {
   right: 0; }
   .target-profile-content p {
     padding: 5px 10px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     font-size: 80%; }
     .target-profile-content p:nth-of-type(2) {
       border-bottom: 1px solid gainsboro;

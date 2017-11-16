@@ -153,6 +153,9 @@ class Header extends React.Component {
                   {this.props.email &&
                     <p>User Name: {this.props.email}</p>
                   }
+                  {this.props.corpname &&
+                    <p>Corperate Name: {this.props.corpname}</p>
+                  }
                   <ul>
                     <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
                   </ul>
