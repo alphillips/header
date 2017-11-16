@@ -253,6 +253,8 @@ nav.bm-item-list {
   margin-top: 3px;
   margin-bottom: 0;
   margin-left: 0; }
+  .top-links li a:focus {
+    outline: 0 !important; }
   .top-links li.header-app-name {
     vertical-align: top;
     overflow: hidden;
@@ -351,7 +353,7 @@ nav.bm-item-list {
   right: 0; }
   .target-profile-content p {
     padding: 5px 10px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     font-size: 80%; }
     .target-profile-content p:nth-of-type(2) {
       border-bottom: 1px solid gainsboro;
@@ -422,3 +424,16 @@ nav.bm-item-list {
 
 :required {
   box-shadow: none; }
+
+.unread-count {
+  background-color: #EC4D4D;
+  position: absolute;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  right: 215px;
+  border-radius: 10px;
+  color: white;
+  padding-left: 6px;
+  padding-bottom: 6px;
+  font-size: 80%; }
