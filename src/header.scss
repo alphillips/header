@@ -399,15 +399,16 @@ nav.bm-item-list {
   @extend .header-menu-content;
   top: 100%;
   right: 0;
+
+  ul {
+    border-top: 1px solid $serchhover;
+    padding-top: 5px;
+  }
+  
   p {
     padding: 5px 10px;
     margin-bottom: 0!important;
     font-size: 80%;
-
-    &:nth-of-type(2) {
-      border-bottom: 1px solid $serchhover;
-      padding-bottom: 5px;
-    }
   }
   @media screen and (min-width: 992px) {
     top: 34px;

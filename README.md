@@ -27,8 +27,10 @@ import Header from '@react-ag-components/header'
 | showInbox      | boolean | inbox search visibility |
 | menu     | object      |   <ul><li>... |
 | abn | string      |  abn number   |
-| userName | string      |    their logon id, normally their email |
-| corpname | string      |    austkey user, display corporation name |
+| userName | string      |    firstname + lastname |
+| logonid | string      |    their logon id, normally their email |
+| orgName | string      |    organisation name |
+| otherInfo | Object Array with field "label" and "value"      |    ["label": "labelVal", "value": "valueVal"] |
 | name | string      | page heading    |
 | searchArray |  JSON Array     |    array to search on |
 | searchKey |   string   |    "id"|
