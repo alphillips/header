@@ -351,13 +351,13 @@ nav.bm-item-list {
 .target-profile-content {
   top: 100%;
   right: 0; }
+  .target-profile-content ul {
+    border-top: 1px solid gainsboro;
+    padding-top: 5px; }
   .target-profile-content p {
     padding: 5px 10px;
     margin-bottom: 0 !important;
     font-size: 80%; }
-    .target-profile-content p:nth-of-type(2) {
-      border-bottom: 1px solid gainsboro;
-      padding-bottom: 5px; }
   @media screen and (min-width: 992px) {
     .target-profile-content {
       top: 34px;

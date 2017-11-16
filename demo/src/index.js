@@ -10,6 +10,17 @@ import Header from '../../src'
 
 let Demo = React.createClass({
   render() {
+
+    let otherInfo=[]
+    let h1 =  {"label":"org size", "value":"20"}
+    let h2 = {"label":"date of registration", "value":"25/11/2017"}
+    let h3 = {"label":"year with company", "value":"2 years"}
+    let h4 = {"label":"org size", "value":"20 people"}
+    otherInfo.push(h1)
+    otherInfo.push(h2)
+    otherInfo.push(h3)
+    otherInfo.push(h4)
+
     return <div className="uikit-body">
       <Header
         menu={
@@ -24,7 +35,9 @@ let Demo = React.createClass({
         name="Heading"
         userName="Demo User"
         abn="abn1234"
-        email="demo.user@gamil.com"
+        logonId="demo.user@gmail.com"
+        orgName="Organisation Name"
+        otherInfo = {otherInfo}
         showInbox={true}
         unreadCount="5"
       />

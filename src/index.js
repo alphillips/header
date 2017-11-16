@@ -155,8 +155,16 @@ class Header extends React.Component {
                   {this.props.abn &&
                     <p>ABN: {this.props.abn}</p>
                   }
-                  {this.props.email &&
-                    <p>User Name: {this.props.email}</p>
+                  {this.props.logonId &&
+                    <p>Login ID: {this.props.logonId}</p>
+                  }
+                  {this.props.orgName &&
+                    <p>Org Name: {this.props.orgName}</p>
+                  }
+                  {this.props.otherInfo  &&
+                    this.props.otherInfo.map ((info) =>
+                      <p key={info.label + info.value}> {info.label}: {info.value}</p>
+                    )
                   }
                   <ul>
                     <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
