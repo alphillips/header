@@ -6,7 +6,7 @@
     font-size: 0.8rem;
     border: 1px solid #E0E0E0;
     padding-left: 22px;
-    width: 100%;
+    width: inherit;
     border-radius: 12px; }
     .autosuggestContainer .react-autosuggest__input::-webkit-search-cancel-button, .autosuggestContainer .react-autosuggest__input::-webkit-search-results-button, .autosuggestContainer .react-autosuggest__input::-webkit-search-results-decoration {
       display: none; }
