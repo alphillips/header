@@ -133,13 +133,13 @@ class Header extends React.Component {
                   }
                 </li>
                 <li className="header-app-inbox-container">
-                {this.showInbox &&
-                  <a href={this.state.inboxUrl} className="header-app-inbox">
-                    {this.props.unreadCount > 0 &&
-                      <span className="unread-count">{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
-                    }
-                  </a>
-                }
+                  {this.showInbox &&
+                    <a href={this.state.inboxUrl} className="header-app-inbox">
+                      {this.props.unreadCount > 0 &&
+                        <span className="unread-count">{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
+                      }
+                    </a>
+                  }
                 </li>
                 <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
                 <li className="header-app-username target-caret">
@@ -189,7 +189,6 @@ class Header extends React.Component {
         </div>
       </div>
      )
-
    }
 }
 export default Header

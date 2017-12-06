@@ -355,7 +355,7 @@ nav.bm-item-list {
         .desktop-profile {
           display: none;
           @media screen and (min-width: 992px) {
-            display: inline-block;
+            display: inline;
           }
         }
         .mobile-profile {
@@ -409,7 +409,7 @@ nav.bm-item-list {
     border-top: 1px solid $serchhover;
     padding-top: 5px;
   }
-  
+
   p {
     padding: 5px 10px;
     margin-bottom: 0!important;
