@@ -20,9 +20,8 @@ class SearchBar extends React.Component {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
-    return inputLength === 0 ? [] : this.props.searchArray.filter(obj => (obj[this.props.searchKey] !==null) && ((obj[this.props.searchKey].toLowerCase().indexOf(inputValue)) > -1)
-    );
-  };
+    return inputLength === 0 ? [] : this.props.searchArray.filter(obj => (obj[this.props.searchKey] !==null) && ((obj[this.props.searchKey].toLowerCase().indexOf(inputValue)) > -1))
+  }
 
   getSuggestionValue = suggestion => suggestion[this.props.searchKey];
 
