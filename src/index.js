@@ -17,7 +17,7 @@ class Header extends React.Component {
         isOpen: false,
         isProfileOpen: false,
         isHelpOpen: false,
-        inboxUrl: this.props.inboxUrl || "/#/inbox"
+        inboxUrl: this.props.inboxUrl || "/nexdoc/#/inbox"
       }
       this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
       this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
