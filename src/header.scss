@@ -372,6 +372,15 @@ nav.bm-item-list {
       right: 5px;
       top: auto;
       float: none;
+      padding: 0;
+
+      a {
+        width: 95%;
+        display: inline-block;
+        padding-left: 12px;
+        padding: 5px;
+      }
+      
     @media screen and (min-width: 992px) {
         position: relative;
         top: auto;

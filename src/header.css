@@ -323,7 +323,13 @@ nav.bm-item-list {
     position: absolute;
     right: 5px;
     top: auto;
-    float: none; }
+    float: none;
+    padding: 0; }
+    .top-links li.logout-li-link-staff a {
+      width: 95%;
+      display: inline-block;
+      padding-left: 12px;
+      padding: 5px; }
     @media screen and (min-width: 992px) {
       .top-links li.logout-li-link-staff {
         position: relative;
