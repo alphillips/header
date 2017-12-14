@@ -37,7 +37,7 @@ let Demo = React.createClass({
         abn="abn1234"
         logonId="demo.user@gmail.com"
         orgName="Organisation Name"
-        otherInfo = {otherInfo}
+        otherInfo={otherInfo}
         showInbox={true}
         unreadCount="5"
       />

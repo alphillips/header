@@ -23,7 +23,7 @@ class Header extends React.Component {
       this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
       this.onHelpClick = this.onHelpClick.bind(this)
       this.onProfileClick = this.onProfileClick.bind(this)
-      this.showInbox = this.props.showInbox || false
+      this.showInbox = this.props.showInbox
     }
 
     onProfileClick = (e) => {
