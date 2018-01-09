@@ -380,7 +380,7 @@ nav.bm-item-list {
         padding-left: 12px;
         padding: 5px;
       }
-      
+
     @media screen and (min-width: 992px) {
         position: relative;
         top: auto;
@@ -437,6 +437,22 @@ nav.bm-item-list {
   @media screen and (min-width: 992px) {
     top: 34px;
     right: 18%;
+  }
+
+  li {
+    padding: 0!important;
+  }
+
+  a {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+    border-bottom: none;
+    &:focus {
+      background: transparent!important;
+      border-bottom: none!important;
+    }
   }
 }
 
