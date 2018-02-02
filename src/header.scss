@@ -506,7 +506,7 @@ nav.bm-item-list {
   margin: 0 .4em -8px 0;
   background-repeat: no-repeat;
   background-size: auto 22px;
-  pointer-events:none;
+  pointer-events:inherit!important;
 }
 
 .target-help:before {
