@@ -115,7 +115,10 @@ class Header extends React.Component {
               <ul>
                 <li className="home-portal">
                 {window.IS_STAFF &&
-                  <Link to="/" className="staff-home-link">Staff portal</Link>
+                    { //<Link to="/" className="staff-home-link">Staff portal</Link>
+                    }
+
+                  <a href="/staff-portal" className="staff-home-link">Client portal</a>
                 }
                 {!window.IS_STAFF &&
                   <a href="/portal" className="staff-home-link">Client portal</a>
