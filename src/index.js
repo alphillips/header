@@ -17,7 +17,7 @@ class Header extends React.Component {
         isOpen: false,
         isProfileOpen: false,
         isHelpOpen: false,
-        inboxUrl: this.props.inboxUrl || "/nexdoc/#/inbox"
+        inboxUrl: this.props.inboxUrl || "/inbox"
       }
       this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
       this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
@@ -134,11 +134,11 @@ class Header extends React.Component {
                 </li>
                 <li className="header-app-inbox-container">
                   {this.showInbox &&
-                    <a href={this.state.inboxUrl} className="header-app-inbox">
+                    <Link to={this.state.inboxUrl} className="header-app-inbox">
                       {this.props.unreadCount > 0 &&
                         <span className="unread-count">{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
                       }
-                    </a>
+                    </Link>
                   }
                 </li>
                 <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
