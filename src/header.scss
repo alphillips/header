@@ -533,12 +533,14 @@ nav.bm-item-list {
   background-color: rgba(236,77,77,0.85);
   position: absolute;
   top: 2px;
-  width: 12px;
-  height: 12px;
-  right: 215px;
+  right: 212px;
   border-radius: 10px;
   color: white;
-  padding-left: 6px;
-  padding-bottom: 6px;
+  padding: 1px 5px;
   font-size: 80%;
+
+  &.medium {
+    right: 205px;
+    font-size: 70%;
+  }
 }

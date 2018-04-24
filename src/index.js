@@ -136,7 +136,9 @@ class Header extends React.Component {
                   {this.showInbox &&
                     <Link to={this.state.inboxUrl} className="header-app-inbox">
                       {this.props.unreadCount > 0 &&
-                        <span className="unread-count">{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
+                        <span className={"unread-count" + (this.props.unreadCount > 99 ? " medium" : '')}>
+                          <span>{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
+                        </span>
                       }
                     </Link>
                   }
