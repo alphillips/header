@@ -94,9 +94,9 @@ class Header extends React.Component {
           for (i=0;i<links.length;i++){
             links[i].className.remove('current')
           }
-        }
-        if(curlink) {
-          curlink.className = curlink.className + (' current')
+          if(curlink) {
+            curlink.className = curlink.className + (' current')
+          }
         }
       }catch(e){}
 
@@ -113,9 +113,9 @@ class Header extends React.Component {
           for (i=0;i<links.length;i++){
             links[i].className = ''
           }
-        }
-        if(curlink) {
-          curlink.className = 'current'
+          if(curlink) {
+            curlink.className = 'current'
+          }
         }
       }catch(e){}
     }
