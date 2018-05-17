@@ -88,15 +88,14 @@ class Header extends React.Component {
       try {
         // DOM manipulation for showing current manu item
         let links = document.querySelectorAll('nav[class="global-menu"] a')
-        let link = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
-        let i
+        let curlink = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
         if(links){
           links.map((link) =>
             link.className=''
           )
         }
-        if(link) {
-          link.className = 'current'
+        if(curlink) {
+          curlink.className = 'current'
         }
       }catch(e){}
     }
