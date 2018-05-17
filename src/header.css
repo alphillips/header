@@ -231,7 +231,7 @@ nav.bm-item-list {
   background-color: #1B7991; }
 
 .staff-header {
-  background: #ffffff; }
+  background: transparent; }
   .staff-header .global-menu ul li {
     background-color: #fff;
     border: 1px solid #e1e1e1;

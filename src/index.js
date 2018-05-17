@@ -84,6 +84,10 @@ class Header extends React.Component {
       this.showMenuContext()
     }
 
+    clearMenuCurrent = () => {
+      this.showMenuContext()
+    }
+
     showMenuContext = () => {
       try {
         // DOM manipulation for showing current manu item
@@ -96,7 +100,7 @@ class Header extends React.Component {
           }
           link.className = 'current'
         }
-      } catch(e){}
+      }catch(e){}
     }
 
     render() {
@@ -134,7 +138,7 @@ class Header extends React.Component {
                 </li>
                 <li className="header-app-inbox-container">
                   {this.showInbox &&
-                    <Link to={this.state.inboxUrl} className="header-app-inbox">
+                    <Link to={this.state.inboxUrl} onClick={this.clearMenuCurrent} className="header-app-inbox">
                       {this.props.unreadCount > 0 &&
                         <span className={"unread-count" + (this.props.unreadCount > 99 ? " medium" : '')}>
                           <span>{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
