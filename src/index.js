@@ -87,8 +87,8 @@ class Header extends React.Component {
     highlightHeader = () => {
       try {
         // DOM manipulation for showing current header item
-        let links = document.querySelectorAll('div[class="top-links"] a')
-        let curlink = document.querySelector('div[class="top-links"] a[href="' + document.location.hash + '"]')
+        let links = document.querySelectorAll('div[class="top-menu-header"] a')
+        let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
         let i
         if(links){
           for (i=0;i<links.length;i++){
