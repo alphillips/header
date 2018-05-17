@@ -71,7 +71,7 @@ class Header extends React.Component {
     }
 
     componentDidMount() {
-      this.showMenuContext()
+      this.highlightHeader()
     }
 
     onclick = () => {
@@ -81,7 +81,7 @@ class Header extends React.Component {
     }
 
     componentWillReceiveProps = (nextProps) => {
-      this.showMenuContext()
+      this.highlightHeader()
     }
 
     highlightHeader = () => {
@@ -99,6 +99,8 @@ class Header extends React.Component {
           curlink.className = 'current'
         }
       }catch(e){}
+
+      this.showMenuContext()
     }
 
     showMenuContext = () => {
