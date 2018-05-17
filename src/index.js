@@ -90,7 +90,7 @@ class Header extends React.Component {
         if(links){
           let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
           for (let i=0; i<links.length;i++){
-            links[i].className.remove('current')
+            links[i].className.replace(/current/g,'')
           }
           if (curlink) {
             curlink.className = curlink.className + (' current')
