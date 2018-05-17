@@ -84,6 +84,23 @@ class Header extends React.Component {
       this.showMenuContext()
     }
 
+    highlightHeader = () => {
+      try {
+        // DOM manipulation for showing current header item
+        let links = document.querySelectorAll('[class="top-links"] a')
+        let curlink = document.querySelector('[class="top-links"] a[href="' + document.location.hash + '"]')
+        let i
+        if(links){
+          for (i=0;i<links.length;i++){
+            links[i].className = ''
+          }
+        }
+        if(curlink) {
+          curlink.className = 'current'
+        }
+      }catch(e){}
+    }
+
     showMenuContext = () => {
       try {
         // DOM manipulation for showing current manu item
@@ -136,7 +153,7 @@ class Header extends React.Component {
                 </li>
                 <li className="header-app-inbox-container">
                   {this.showInbox &&
-                    <Link to={this.state.inboxUrl} onClick={this.showMenuContext} className="header-app-inbox">
+                    <Link to={this.state.inboxUrl} onClick={this.highlightHeader} className="header-app-inbox">
                       {this.props.unreadCount > 0 &&
                         <span className={"unread-count" + (this.props.unreadCount > 99 ? " medium" : '')}>
                           <span>{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>
