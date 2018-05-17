@@ -85,7 +85,6 @@ class Header extends React.Component {
     }
 
     highlightHeader = () => {
-      try {
         // DOM manipulation for showing current header item
         let links = document.querySelectorAll('div[class="top-menu-header"] a')
         if(links){
@@ -97,24 +96,21 @@ class Header extends React.Component {
             curlink.className = curlink.className + (' current')
           }
         }
-      }catch(e){}
       this.showMenuContext()
     }
 
     showMenuContext = () => {
-      try {
-        // DOM manipulation for showing current manu item
-        let links = document.querySelectorAll('nav[class="global-menu"] a')
-        if(links){
-          let curlink = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
-          for (let i=0;i<links.length;i++){
-            links[i].className = ''
-          }
-          if (curlink) {
-            curlink.className = 'current'
-          }
+      // DOM manipulation for showing current manu item
+      let links = document.querySelectorAll('nav[class="global-menu"] a')
+      if(links){
+        let curlink = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
+        for (let i=0;i<links.length;i++){
+          links[i].className = ''
         }
-      }catch(e){}
+        if (curlink) {
+          curlink.className = 'current'
+        }
+      }
     }
 
     render() {
