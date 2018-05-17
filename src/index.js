@@ -91,12 +91,9 @@ class Header extends React.Component {
         if(links){
           let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
           for (let i=0; i < links.length;++i){
-            if(link[i] !== curlink) {
-              link[i].className.remove('current')
-            } else {
-              if (curlink) {
-                curlink.className = curlink.className + (' current')
-              }
+            link[i].className.remove('current')
+            if (curlink) {
+              curlink.className = curlink.className + (' current')
             }
           }
         }
@@ -111,12 +108,9 @@ class Header extends React.Component {
         if(links){
           let curlink = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
           for (let i=0;i < links.length;++i){
-            if(link[i] !== curlink) {
-              link[i].className = ''
-            } else {
-              if (curlink) {
-                curlink.className = 'current'
-              }
+            link[i].className = ''
+            if (curlink) {
+              curlink.className = 'current'
             }
           }
         }
