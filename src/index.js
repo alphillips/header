@@ -89,17 +89,10 @@ class Header extends React.Component {
         // DOM manipulation for showing current header item
         let links = document.querySelectorAll('div[class="top-menu-header"] a')
         let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
-        let i
         if(links){
-          for (i=0;i<links.length;i++){
-            if(links[i] !== curlink) {
-              links[i].className.remove('current')
-            } else {
-              if (curlink) {
-                curlink.className = curlink.className + (' current')
-              }
-            }
-          }
+          links.map((link, i) => (
+            curlink ? (curlink === link ? curlink.className = curlink.className + (' current') : link.className.remove('current')) : link.className.remove('current')
+          ))
         }
       }catch(e){}
 
@@ -111,17 +104,10 @@ class Header extends React.Component {
         // DOM manipulation for showing current manu item
         let links = document.querySelectorAll('nav[class="global-menu"] a')
         let curlink = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
-        let i
         if(links){
-          for (i=0;i<links.length;i++){
-            if(links[i] !== curlink) {
-              links[i].className = ''
-            }else {
-              if (curlink) {
-                curlink.className = 'current'
-              }
-            }
-          }
+          links.map((link, i) => (
+            curlink ? (curlink === link ? curlink.className = 'current' : link.className = '') : link.className = ''
+          ))
         }
       }catch(e){}
     }
