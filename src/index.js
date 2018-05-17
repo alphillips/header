@@ -94,10 +94,12 @@ class Header extends React.Component {
         let links = document.querySelectorAll('nav[class="global-menu"] a')
         let link = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
         let i
-        if(links && link){
-          for (i=0;i<links.length;i++){
-            links[i].className = ''
-          }
+        if(links){
+          links.map((link) => {
+            link.className=''
+          })
+        }
+        if(link !== null) {
           link.className = 'current'
         }
       }catch(e){}
