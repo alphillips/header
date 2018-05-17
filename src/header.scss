@@ -285,8 +285,10 @@ nav.bm-item-list {
     margin-bottom: 0;
     margin-left: 0;
     a {
-      &:focus{
+      &.current,&:hover,&:focus {
         outline: 0!important;
+        color: #fff;
+        background-color: #823c47;
       }
     }
     &.header-app-name {

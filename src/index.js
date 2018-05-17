@@ -71,7 +71,7 @@ class Header extends React.Component {
     }
 
     componentDidMount() {
-      this.showMenuContext()
+      this.highlightHeader()
     }
 
     onclick = () => {
@@ -81,22 +81,36 @@ class Header extends React.Component {
     }
 
     componentWillReceiveProps = (nextProps) => {
+      this.highlightHeader()
+    }
+
+    highlightHeader = () => {
+        // DOM manipulation for showing current header item
+        let links = document.querySelectorAll('div[class="top-menu-header"] a')
+        if(links){
+          let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
+          for (let i=0; i<links.length;i++){
+            links[i].classList.remove('current')
+          }
+          if (curlink) {
+            curlink.className = curlink.className + (' current')
+          }
+        }
       this.showMenuContext()
     }
 
     showMenuContext = () => {
-      try {
-        // DOM manipulation for showing current manu item
-        let links = document.querySelectorAll('nav[class="global-menu"] a')
-        let link = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
-        let i
-        if(links && link){
-          for (i=0;i<links.length;i++){
-            links[i].className = ''
-          }
-          link.className = 'current'
+      // DOM manipulation for showing current manu item
+      let links = document.querySelectorAll('nav[class="global-menu"] a')
+      if(links){
+        let curlink = document.querySelector('nav[class="global-menu"] a[href="' + document.location.hash + '"]')
+        for (let i=0;i<links.length;i++){
+          links[i].className = ''
         }
-      } catch(e){}
+        if (curlink) {
+          curlink.className = 'current'
+        }
+      }
     }
 
     render() {
@@ -134,7 +148,7 @@ class Header extends React.Component {
                 </li>
                 <li className="header-app-inbox-container">
                   {this.showInbox &&
-                    <Link to={this.state.inboxUrl} className="header-app-inbox">
+                    <Link to={this.state.inboxUrl} onClick={this.highlightHeader} className="header-app-inbox">
                       {this.props.unreadCount > 0 &&
                         <span className={"unread-count" + (this.props.unreadCount > 99 ? " medium" : '')}>
                           <span>{this.props.unreadCount > 0 ? this.props.unreadCount : '' }</span>

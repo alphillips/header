@@ -231,7 +231,7 @@ nav.bm-item-list {
   background-color: #1B7991; }
 
 .staff-header {
-  background: #ffffff; }
+  background: transparent; }
   .staff-header .global-menu ul li {
     background-color: #fff;
     border: 1px solid #e1e1e1;
@@ -253,8 +253,10 @@ nav.bm-item-list {
   margin-top: 3px;
   margin-bottom: 0;
   margin-left: 0; }
-  .top-links li a:focus {
-    outline: 0 !important; }
+  .top-links li a.current, .top-links li a:hover, .top-links li a:focus {
+    outline: 0 !important;
+    color: #fff;
+    background-color: #823c47; }
   .top-links li.header-app-name {
     vertical-align: top;
     overflow: hidden;
