@@ -92,11 +92,11 @@ class Header extends React.Component {
         let i
         if(links){
           for (i=0;i<links.length;i++){
-            links[i].className = ''
+            links[i].className.remove('current')
           }
         }
         if(curlink) {
-          curlink.className = 'current'
+          curlink.className = curlink.className + (' current')
         }
       }catch(e){}
 
