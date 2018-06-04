@@ -22,8 +22,8 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react-autosuggest": "^9.3.2",
-    "react-burger-menu": "^2.1.4"
+    "react-burger-menu": "^2.1.4",
+    "react-autosuggest": "^9.3.2"
   },
   "peerDependencies": {
     "react": "15.x"
