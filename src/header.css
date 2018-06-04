@@ -422,7 +422,7 @@ nav.bm-item-list {
           text-decoration: none !important;
           border-bottom: 0 !important; }
 
-.header-icon, .top-links li.header-app-username a .mobile-profile, .target-help:before, .header-app-inbox:before, .staff-home-link:before {
+.header-icon, .top-links li.header-app-username a .mobile-profile, .target-help:before, .header-app-inbox::before, .staff-home-link:before {
   content: " ";
   display: inline-block;
   width: 24px;
@@ -435,8 +435,10 @@ nav.bm-item-list {
 .target-help:before {
   background-image: url(help.svg); }
 
-.header-app-inbox:before {
-  background-image: url(tray.svg); }
+.header-app-inbox {
+  position: relative; }
+  .header-app-inbox::before {
+    background-image: url(tray.svg); }
 
 .staff-home-link:before {
   background-image: url(home.svg); }
@@ -448,7 +450,7 @@ nav.bm-item-list {
   background-color: rgba(236, 77, 77, 0.85);
   position: absolute;
   top: 2px;
-  right: 212px;
+  right: 7%;
   border-radius: 10px;
   color: white;
   padding: 1px 5px;

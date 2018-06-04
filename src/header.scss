@@ -516,9 +516,12 @@ nav.bm-item-list {
   background-image: url(help.svg);
 }
 
-.header-app-inbox:before {
-  @extend .header-icon;
-  background-image: url(tray.svg);
+.header-app-inbox {
+  position: relative;
+  &::before {
+    @extend .header-icon;
+    background-image: url(tray.svg);
+  }
 }
 
 .staff-home-link:before {
@@ -535,7 +538,7 @@ nav.bm-item-list {
   background-color: rgba(236,77,77,0.85);
   position: absolute;
   top: 2px;
-  right: 212px;
+  right: 7%;
   border-radius: 10px;
   color: white;
   padding: 1px 5px;
