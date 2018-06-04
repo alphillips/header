@@ -189,7 +189,7 @@ class Header extends React.Component {
               }
               {this.state.isHelpOpen &&
                 <div className="target-help-content" ref={node => { this.node = node; }}>
-                  {this.props.helpPages && JSON.stringify(this.props.helpPages)!=="{}" &&
+                  {this.props.helpPages && this.props.helpPages.length > 0 &&
                   <ul>
                     {this.props.helpPages.map((helpPage) =>
                       <li className="help-item">
