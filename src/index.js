@@ -192,7 +192,7 @@ class Header extends React.Component {
                   {this.props.helpPages && this.props.helpPages.length > 0 &&
                   <ul>
                     {this.props.helpPages.map((helpPage, i) =>
-                      <li className="help-item"> key={i}
+                      <li className="help-item" key={i}> 
                         <a href={helpPage.link.indexOf("http")>-1 ? helpPage.link : "#"+helpPage.link}>{helpPage.code}</a>
                       </li>
                     )}
