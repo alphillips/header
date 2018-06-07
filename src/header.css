@@ -387,7 +387,7 @@ nav.bm-item-list {
     padding-bottom: 0;
     background: transparent;
     border-bottom: none; }
-    .target-help-content a:focus {
+    .target-help-content a:focus, .target-help-content a.current {
       background: transparent !important;
       border-bottom: none !important; }
 
