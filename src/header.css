@@ -379,14 +379,15 @@ nav.bm-item-list {
       top: 34px;
       right: 18%; } }
   .target-help-content li {
-    padding: 0 !important; }
+    padding: 0 !important;
+    display: block !important; }
   .target-help-content a {
     display: block;
     padding-top: 0;
     padding-bottom: 0;
     background: transparent;
     border-bottom: none; }
-    .target-help-content a:focus {
+    .target-help-content a:focus, .target-help-content a.current {
       background: transparent !important;
       border-bottom: none !important; }
 

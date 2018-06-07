@@ -443,6 +443,7 @@ nav.bm-item-list {
 
   li {
     padding: 0!important;
+    display: block!important;
   }
 
   a {
@@ -451,7 +452,7 @@ nav.bm-item-list {
     padding-bottom: 0;
     background: transparent;
     border-bottom: none;
-    &:focus {
+    &:focus, &.current  {
       background: transparent!important;
       border-bottom: none!important;
     }
