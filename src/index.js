@@ -157,7 +157,9 @@ class Header extends React.Component {
                     </Link>
                   }
                 </li>
-                <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
+                {this.props.helpPages && this.props.helpPages.length > 0 &&
+                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
+                }
                 <li className="header-app-username target-caret">
                   <a href="#" title={this.props.userName} onClick={this.onProfileClick.bind(this)}>
                     <span className="desktop-profile">{this.props.userName}</span>
