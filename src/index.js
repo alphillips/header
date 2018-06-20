@@ -2,6 +2,7 @@ import React from 'react'
 import MenuSlide from 'react-burger-menu/lib/menus/slide'
 import SearchBar from './SearchBar'
 import { Link, hashHistory } from 'react-router'
+import * as api from "./api";
 
 import logo from './da-logo.svg'
 import './header.css'
@@ -25,6 +26,17 @@ class Header extends React.Component {
       this.onProfileClick = this.onProfileClick.bind(this)
       this.showInbox = this.props.showInbox
     }
+
+    componentDidMount = () => {
+      this.updateList()
+    };
+
+    updateList = () => {
+      api.getHelpPages(window.IS_STAFF).then(helpPages => {
+        this.setState({helpPages})
+      });
+    };
+
 
     onProfileClick = (e) => {
       // attach/remove event handler
@@ -157,7 +169,7 @@ class Header extends React.Component {
                     </Link>
                   }
                 </li>
-                {this.props.helpPages && this.props.helpPages.length > 0 &&
+                {this.state.helpPages && this.state.helpPages.length > 0 &&
                   <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
                 }
                 <li className="header-app-username target-caret">
@@ -191,11 +203,11 @@ class Header extends React.Component {
               }
               {this.state.isHelpOpen &&
                 <div className="target-help-content" ref={node => { this.node = node; }}>
-                  {this.props.helpPages && this.props.helpPages.length > 0 &&
+                  {this.state.helpPages && this.state.helpPages.length > 0 &&
                   <ul>
-                    {this.props.helpPages.map((helpPage, i) =>
+                    {this.state.helpPages.map((helpPage, i) =>
                       <li className="help-item" key={i}>
-                        <a href={helpPage.link.indexOf("http")>-1 ? helpPage.link : "#"+helpPage.link}>{helpPage.displayName}</a>
+                        <a target="_blank" href={helpPage.value.indexOf("http")>-1 ? helpPage.value : "#"+helpPage.value}>{helpPage.label}</a>
                       </li>
                     )}
                   </ul>
