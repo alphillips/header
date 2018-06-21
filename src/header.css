@@ -356,6 +356,25 @@ nav.bm-item-list {
       right: 5px;
       pointer-events: none; } }
 
+.other-links-li {
+  padding: 0 !important; }
+  .other-links-li:focus, .other-links-li:hover {
+    background-color: whitesmoke !important;
+    border-bottom: 0 !important; }
+  .other-links-li:hover {
+    background-color: gainsboro !important;
+    border-bottom: 0 !important; }
+  .other-links-li a {
+    width: 95%;
+    display: inline-block;
+    padding: 5px 0 5px 12px !important; }
+    .other-links-li a:focus, .other-links-li a:hover {
+      background-color: whitesmoke !important;
+      border-bottom: 0 !important; }
+    .other-links-li a:hover {
+      background-color: gainsboro !important;
+      border-bottom: 0 !important; }
+
 .target-profile-content {
   top: 100%;
   right: 0; }

@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/header",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "header React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "react-burger-menu": "^2.1.4",
-    "react-autosuggest": "^9.3.2"
+    "react-autosuggest": "^9.3.2",
+    "@react-ag-components/core": "latest"
   },
   "peerDependencies": {
     "react": "15.x"

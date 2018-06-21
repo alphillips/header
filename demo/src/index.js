@@ -21,6 +21,15 @@ let Demo = React.createClass({
     otherInfo.push(h3)
     otherInfo.push(h4)
 
+    let otherLinks=[]
+    let l1 = {"label":"Client Page", "value":"/"}
+    let l2 = {"label":"Client Detail", "value":"/detail"}
+    let l3 = {"label":"Client Profile", "value":"/profile"}
+
+    otherLinks.push(l1)
+    otherLinks.push(l2)
+    otherLinks.push(l3)
+
     return <div className="uikit-body">
       <Header
         menu={
@@ -38,6 +47,7 @@ let Demo = React.createClass({
         logonId="demo.user@gmail.com"
         orgName="Organisation Name"
         otherInfo={otherInfo}
+        otherLinks={otherLinks}
         showInbox={true}
         unreadCount="5"
       />
