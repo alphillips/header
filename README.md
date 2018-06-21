@@ -31,6 +31,7 @@ import Header from '@react-ag-components/header'
 | logonId | string      |    their logon id, normally their email |
 | orgName | string      |    organisation name |
 | otherInfo | Object Array with field "label" and "value"      |    ["label": "labelVal", "value": "valueVal"] |
+| otherLink | Object Array with field "label" and "value"      |    ["label": "labelVal", "value": "/"] |
 | name | string      | page heading    |
 | searchArray |  JSON Array     |    array to search on |
 | searchKey |   string   |    "id"|
