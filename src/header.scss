@@ -411,6 +411,31 @@ nav.bm-item-list {
   }
 }
 
+.other-links-li {
+  padding:0!important;
+  &:focus, &:hover {
+    background-color: whitesmoke!important;
+    border-bottom: 0!important;
+  }
+  &:hover {
+    background-color: gainsboro!important;
+    border-bottom: 0!important;
+  }
+  a {
+    width: 95%;
+    display: inline-block;
+    padding: 5px 0 5px 12px!important;
+    &:focus, &:hover {
+      background-color: whitesmoke!important;
+      border-bottom: 0!important;
+    }
+    &:hover {
+      background-color: gainsboro!important;
+      border-bottom: 0!important;
+    }
+  }
+}
+
 .target-profile-content {
   @extend .header-menu-content;
   top: 100%;

@@ -196,6 +196,13 @@ class Header extends React.Component {
                       <p key={info.label + info.value}> {info.label}: {info.value}</p>
                     )
                   }
+                  {this.props.otherLinks  &&
+                    <ul>
+                    {this.props.otherLinks.map ((otherLink) =>
+                      <li className="other-links-li" key={otherLink.label + otherLink.value} ><a href={otherLink.value.indexOf("http")>-1 ? otherLink.value : "#"+otherLink.value}>{otherLink.label}</a></li>
+                    )}
+                    </ul>
+                  }
                   <ul>
                     <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
                   </ul>
