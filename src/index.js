@@ -65,7 +65,6 @@ class Header extends React.Component {
       this.setState((prevState, props) => ({
         isProfileOpen:!this.state.isProfileOpen
       }))
-      e.preventDefault()
     }
 
     onHelpClick = (e) => {
@@ -79,7 +78,6 @@ class Header extends React.Component {
       this.setState((prevState, props) => ({
         isHelpOpen:!this.state.isHelpOpen
       }))
-      e.preventDefault()
     }
 
     handleOutsideClickProfile = (e) => {
