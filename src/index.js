@@ -20,16 +20,32 @@ class Header extends React.Component {
         isHelpOpen: false,
         inboxUrl: this.props.inboxUrl || "/inbox"
       }
-      this.handleOutsideClickProfile = this.handleOutsideClickProfile.bind(this)
-      this.handleOutsideClickHelp = this.handleOutsideClickHelp.bind(this)
-      this.onHelpClick = this.onHelpClick.bind(this)
-      this.onProfileClick = this.onProfileClick.bind(this)
       this.showInbox = this.props.showInbox
     }
 
     componentDidMount = () => {
       this.updateList()
+      this.highlightHeader()
     };
+
+    componentWillReceiveProps = (nextProps) => {
+      this.highlightHeader()
+    }
+
+    highlightHeader = () => {
+        // DOM manipulation for showing current header item
+        let links = document.querySelectorAll('div[class="top-menu-header"] a')
+        if(links){
+          let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
+          for (let i=0; i<links.length;i++){
+            links[i].classList.remove('current')
+          }
+          if (curlink) {
+            curlink.className = curlink.className + (' current')
+          }
+        }
+      this.showMenuContext()
+    }
 
     updateList = () => {
       api.getHelpPages(window.IS_STAFF).then(helpPages => {
@@ -67,48 +83,17 @@ class Header extends React.Component {
     }
 
     handleOutsideClickProfile = (e) => {
-      // ignore clicks on the component itself
-      if (this.node.contains(e.target)) {
-        return;
-      }
       this.onProfileClick(e)
     }
 
     handleOutsideClickHelp = (e) => {
-      // ignore clicks on the component itself
-      if (this.node.contains(e.target)) {
-        return;
-      }
       this.onHelpClick(e)
-    }
-
-    componentDidMount() {
-      this.highlightHeader()
     }
 
     onclick = () => {
       this.setState((prevState, props) => ({
         isOpen:!this.state.isOpen
       }))
-    }
-
-    componentWillReceiveProps = (nextProps) => {
-      this.highlightHeader()
-    }
-
-    highlightHeader = () => {
-        // DOM manipulation for showing current header item
-        let links = document.querySelectorAll('div[class="top-menu-header"] a')
-        if(links){
-          let curlink = document.querySelector('div[class="top-menu-header"] a[href="' + document.location.hash + '"]')
-          for (let i=0; i<links.length;i++){
-            links[i].classList.remove('current')
-          }
-          if (curlink) {
-            curlink.className = curlink.className + (' current')
-          }
-        }
-      this.showMenuContext()
     }
 
     showMenuContext = () => {
@@ -170,10 +155,10 @@ class Header extends React.Component {
                   }
                 </li>
                 {this.state.helpPages && this.state.helpPages.length > 0 &&
-                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick.bind(this)}><span ></span></a></li>
+                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
                 }
                 <li className="header-app-username target-caret">
-                  <a href="#" title={this.props.userName} onClick={this.onProfileClick.bind(this)}>
+                  <a href="#" title={this.props.userName} onClick={this.onProfileClick}>
                     <span className="desktop-profile">{this.props.userName}</span>
                     <span className="mobile-profile"></span>
                   </a>
