@@ -49,7 +49,7 @@ let Demo = React.createClass({
         otherInfo={otherInfo}
         otherLinks={otherLinks}
         showInbox={true}
-        unreadCount="5"
+        unreadCount="500"
       />
     </div>
   }

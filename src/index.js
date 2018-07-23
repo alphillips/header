@@ -18,7 +18,9 @@ class Header extends React.Component {
         isOpen: false,
         isProfileOpen: false,
         isHelpOpen: false,
-        inboxUrl: this.props.inboxUrl || "/inbox"
+        inboxUrl: this.props.inboxUrl || "/inbox",
+        nonNexDoc:this.props.nonNexDoc || false,
+        helpPages:[]
       }
       this.showInbox = this.props.showInbox
     }
@@ -48,9 +50,12 @@ class Header extends React.Component {
     }
 
     updateList = () => {
-      api.getHelpPages(window.IS_STAFF).then(helpPages => {
-        this.setState({helpPages})
-      });
+      // nonNexDoc is client portal or staff portal
+      if(!this.state.nonNexDoc){
+        api.getHelpPages(window.IS_STAFF).then(helpPages => {
+          this.setState({helpPages})
+        });
+      }
     };
 
 
