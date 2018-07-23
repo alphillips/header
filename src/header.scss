@@ -542,7 +542,7 @@ nav.bm-item-list {
 }
 
 .target-help{
-  cursor:pinter;
+  cursor:pointer;
   &:before {
     @extend .header-icon;
     background-image: url(help.svg);

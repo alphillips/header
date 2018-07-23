@@ -456,7 +456,7 @@ nav.bm-item-list {
   pointer-events: inherit !important; }
 
 .target-help {
-  cursor: pinter; }
+  cursor: pointer; }
   .target-help:before {
     background-image: url(help.svg); }
 
