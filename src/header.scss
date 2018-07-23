@@ -13,6 +13,10 @@ $serchhover: darken(whitesmoke, 10%);
   padding-left: 0;
 }
 
+.profile-container {
+  cursor:pointer;
+}
+
 @media screen and (min-width: 992px) {
   .header .header-block {
     max-width: 900px;
@@ -537,9 +541,12 @@ nav.bm-item-list {
   pointer-events:inherit!important;
 }
 
-.target-help:before {
-  @extend .header-icon;
-  background-image: url(help.svg);
+.target-help{
+  cursor:pinter;
+  &:before {
+    @extend .header-icon;
+    background-image: url(help.svg);
+  }
 }
 
 .header-app-inbox {

@@ -158,13 +158,13 @@ class Header extends React.Component {
                   }
                 </li>
                 {this.state.helpPages && this.state.helpPages.length > 0 &&
-                  <li className="header-app-help target-caret"><a href="#" className="target-help" onClick={this.onHelpClick}><span ></span></a></li>
+                  <li className="header-app-help target-caret"><Link className="target-help" onClick={this.onHelpClick}><span ></span></Link></li>
                 }
                 <li className="header-app-username target-caret">
-                  <a href="#" title={this.props.userName} onClick={this.onProfileClick}>
+                  <Link className="profile-container" title={this.props.userName} onClick={this.onProfileClick}>
                     <span className="desktop-profile">{this.props.userName}</span>
                     <span className="mobile-profile"></span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
