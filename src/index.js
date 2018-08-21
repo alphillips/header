@@ -2,7 +2,6 @@ import React from 'react'
 import MenuSlide from 'react-burger-menu/lib/menus/slide'
 import SearchBar from './SearchBar'
 import { Link, hashHistory } from 'react-router'
-import * as api from "./api";
 
 import logo from './da-logo.svg'
 import './header.css'
@@ -18,15 +17,12 @@ class Header extends React.Component {
         isOpen: false,
         isProfileOpen: false,
         isHelpOpen: false,
-        inboxUrl: this.props.inboxUrl || "/inbox",
-        showHelpPage:this.props.showHelpPage === true,
-        helpPages:[]
+        inboxUrl: this.props.inboxUrl || "/inbox"
       }
       this.showInbox = this.props.showInbox
     }
 
     componentDidMount = () => {
-      this.updateList()
       this.highlightHeader()
     };
 
@@ -49,14 +45,6 @@ class Header extends React.Component {
       this.showMenuContext()
     }
 
-    updateList = () => {
-      // nonNexDoc is client portal or staff portal
-      if(this.state.showHelpPage){
-        api.getHelpPages(window.IS_STAFF).then(helpPages => {
-          this.setState({helpPages})
-        });
-      }
-    };
 
 
     onProfileClick = (e) => {
@@ -157,7 +145,7 @@ class Header extends React.Component {
                     </Link>
                   }
                 </li>
-                {this.state.helpPages && this.state.helpPages.length > 0 &&
+                {this.props.helpPages && this.props.helpPages.length > 0 &&
                   <li className="header-app-help target-caret"><Link className="target-help" onClick={this.onHelpClick}><span ></span></Link></li>
                 }
                 <li className="header-app-username target-caret">
@@ -198,9 +186,9 @@ class Header extends React.Component {
               }
               {this.state.isHelpOpen &&
                 <div className="target-help-content" ref={node => { this.node = node; }}>
-                  {this.state.helpPages && this.state.helpPages.length > 0 &&
+                  {this.props.helpPages && this.props.helpPages.length > 0 &&
                   <ul>
-                    {this.state.helpPages.map((helpPage, i) =>
+                    {this.props.helpPages.map((helpPage, i) =>
                       <li className="help-item" key={i}>
                         <a target="_blank" href={helpPage.value.indexOf("http")>-1 ? helpPage.value : "#"+helpPage.value}>{helpPage.label}</a>
                       </li>
