@@ -264,12 +264,12 @@ nav.bm-item-list {
     vertical-align: top;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 36%; }
+    width: 32%; }
     @media (min-width: 768px) {
       .top-links li.header-app-name {
         text-align: center; } }
   .top-links li.home-portal {
-    width: 128px; }
+    width: 150px; }
   .top-links li.autocomplete-li-link-search {
     margin-left: 20px;
     width: 170px; }
