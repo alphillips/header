@@ -299,13 +299,13 @@ nav.bm-item-list {
       vertical-align: top;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 36%;
+      width: 32%;
       @media (min-width: 768px) {
         text-align: center;
       }
     }
     &.home-portal {
-      width: 128px;
+      width: 150px;
     }
     &.autocomplete-li-link-search{
       margin-left: 20px;
