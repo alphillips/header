@@ -179,9 +179,11 @@ class Header extends React.Component {
                     )}
                     </ul>
                   }
-                  <ul>
-                    <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
-                  </ul>
+                  {this.props.showLogOut &&
+                    <ul>
+                        <li className="logout-li-link-staff"><a href="/auth/faces/logout/">Log Out</a></li>
+                    </ul>
+                  }
                 </div>
               }
               {this.state.isHelpOpen &&

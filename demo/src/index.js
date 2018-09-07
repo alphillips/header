@@ -50,6 +50,7 @@ let Demo = React.createClass({
         otherLinks={otherLinks}
         showInbox={true}
         unreadCount="500"
+        showLogOut={true}
       />
     </div>
   }
