@@ -102,6 +102,7 @@ class Header extends React.Component {
     }
 
     render() {
+    const showProfileOptions = this.props.abn || this.props.logonId || this.props.orgName || this.props.otherInfo || this.props.otherLinks || this.props.showLogOut
       return (
       <div className={(window.IS_STAFF) ? "staff-header header":"header"}>
         <div className="side-menu-container">
@@ -148,7 +149,7 @@ class Header extends React.Component {
                 {this.props.helpPages && this.props.helpPages.length > 0 &&
                   <li className="header-app-help target-caret"><Link className="target-help" onClick={this.onHelpClick}><span ></span></Link></li>
                 }
-                <li className="header-app-username target-caret">
+                <li className={showProfileOptions ? "header-app-username target-caret" : "header-app-username"}>
                   <Link className="profile-container" title={this.props.userName} onClick={this.onProfileClick}>
                     <span className="desktop-profile">{this.props.userName}</span>
                     <span className="mobile-profile"></span>
@@ -156,7 +157,7 @@ class Header extends React.Component {
                 </li>
               </ul>
 
-              {this.state.isProfileOpen &&
+              {this.state.isProfileOpen && showProfileOptions &&
                 <div className="target-profile-content" ref={node => { this.node = node; }}>
                   {this.props.abn &&
                     <p>ABN: {this.props.abn}</p>
