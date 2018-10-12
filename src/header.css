@@ -291,12 +291,13 @@ nav.bm-item-list {
     height: 0px;
     width: 15px;
     max-width: inherit;
-    float: right; }
+    float: none; }
     @media screen and (min-width: 992px) {
       .top-links li.header-app-username {
         width: 153px;
         text-align: right;
-        max-width: 17%; } }
+        max-width: 17%;
+        float: right; } }
     .top-links li.header-app-username.target-caret:after {
       top: 14px; }
     .top-links li.header-app-username a {

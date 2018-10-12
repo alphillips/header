@@ -332,11 +332,12 @@ nav.bm-item-list {
       height: 0px;
       width: 15px;
       max-width:inherit;
-      float:right;
+      float:none;
       @media screen and (min-width: 992px) {
         width: 153px;
         text-align: right;
         max-width: 17%;
+        float: right;
       }
 
       &.target-caret:after{
