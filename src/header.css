@@ -290,7 +290,8 @@ nav.bm-item-list {
     vertical-align: top;
     height: 0px;
     width: 15px;
-    max-width: inherit; }
+    max-width: inherit;
+    float: right; }
     @media screen and (min-width: 992px) {
       .top-links li.header-app-username {
         width: 153px;
@@ -391,7 +392,7 @@ nav.bm-item-list {
   @media screen and (min-width: 992px) {
     .target-profile-content {
       top: 34px;
-      right: 0.8%; } }
+      right: 0; } }
 
 .target-help-content {
   right: 0;
@@ -416,7 +417,7 @@ nav.bm-item-list {
 .header-menu-content, .target-profile-content, .target-help-content {
   position: absolute;
   text-decoration: none;
-  min-width: 160px;
+  min-width: 150px;
   width: auto;
   min-height: 30px;
   background-color: white;
