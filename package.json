@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/header",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "header React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
     "nwb": "0.15.x",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
